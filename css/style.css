@@ -79,4 +79,60 @@ header a:hover {
   color: white;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.overlay:hover {
+  opacity: 1;
+}
+
+nav {
+  background-color: #1e73be;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  width: 100% !important;
+}
+nav .close_nav {
+  display: none;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.25rem;
+}
+nav ul li {
+  background-color: #1e73be;
+  display: inline-block;
+  width: 14.2857142857%;
+  text-align: center;
+  margin: 0;
+  letter-spacing: normal;
+  padding: 15px 0;
+  box-sizing: unset;
+}
+nav ul li:hover {
+  background-color: black;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  padding: 5px 0px;
+  display: block;
+  margin: 0 0.5em;
+}
+
+.menu_burger {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
