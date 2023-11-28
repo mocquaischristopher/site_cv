@@ -1,1 +1,19 @@
-*{margin:0;padding:0}
+/* Error: Undefined mixin.
+ *    ,
+ * 42 | / @include for_tablet{
+ * 43 | | 
+ * 44 | \ }
+ *    '
+ *   sass\layout\_header.scss 42:1  @import
+ *   sass\main.scss 12:9            root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 42 \2502  \250c  @include for_tablet{\a 43 \2502  \2502  \a 44 \2502  \2514  }\a    \2575 \a   sass\\layout\\_header.scss 42:1  @import\a   sass\\main.scss 12:9            root stylesheet";
+}
