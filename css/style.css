@@ -1,19 +1,82 @@
-/* Error: Undefined mixin.
- *    ,
- * 42 | / @include for_tablet{
- * 43 | | 
- * 44 | \ }
- *    '
- *   sass\layout\_header.scss 42:1  @import
- *   sass\main.scss 12:9            root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 42 \2502  \250c  @include for_tablet{\a 43 \2502  \2502  \a 44 \2502  \2514  }\a    \2575 \a   sass\\layout\\_header.scss 42:1  @import\a   sass\\main.scss 12:9            root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
 }
+
+@font-face {
+  font-family: "gagalin";
+  src: url("Gagalin-Regular.eot");
+  src: url("../../css/Gagalin-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+  font-family: "Gagalin", "sans-serif";
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.cv_haut, .cv_bas, #port_ouvert, #port_fermer {
+  font-family: "Gagalin", "sans-serif";
+}
+
+#btn_scroll {
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  bottom: 2%;
+  right: 2%;
+  opacity: 0.5;
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+}
+
+header {
+  background-color: #cae8ff;
+  background-blend-mode: soft-light;
+  background-image: url(../img/img-header.PNG);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding-bottom: 40px;
+}
+header h1 {
+  font-weight: normal;
+  font-size: 4em;
+  margin: 0;
+  padding: 25px;
+  text-align: center;
+  color: #1e73be;
+}
+header h2 {
+  color: black;
+  font-size: 3em;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+}
+header a {
+  display: block;
+  width: 30%;
+  text-align: center;
+  margin: auto;
+  border: solid 2px #1e73be;
+  border-radius: 10px;
+  font-size: 40px;
+  color: #1e73be;
+  text-decoration: none;
+  padding: 7px;
+}
+header a:hover {
+  background-color: black;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
