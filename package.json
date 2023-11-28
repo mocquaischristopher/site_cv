@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all --parallel liveserver watch",
     "liveserver": "live-server",
-    "watch": "node-sass sass/main.scss css/style.css -w",
+    "watch": "sass --watch ./sass/main.scss:./css/style.css",
     "compile": "node-sass sass/main.scss css/style.css",
     "prefix": "postcss css/style.css --use autoprefixer -o css/style.css",
     "compress": "node-sass css/style.css css/style.css --output-style compressed",
