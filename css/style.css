@@ -96,6 +96,46 @@ h2, h3, h4, h5, h6 {
     padding: 5% 0;
   }
 }
+.skill {
+  height: 37rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .skill {
+    display: flex;
+  }
+  .skill .moitie {
+    width: 50%;
+  }
+  .skill #Logiciel {
+    display: flex;
+    flex-direction: column;
+  }
+  .skill #Logiciel .logiciel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "html css js . . . " "php mysql . . . ." ". . . . . ." ". . . . . .";
+  }
+  .html {
+    grid-area: html;
+  }
+  .css {
+    grid-area: css;
+  }
+  .js {
+    grid-area: js;
+  }
+  .jquery {
+    grid-area: jquery;
+  }
+  .php {
+    grid-area: php;
+  }
+  .mysql {
+    grid-area: mysql;
+  }
+}
 header {
   background-color: #cae8ff;
   background-blend-mode: soft-light;
