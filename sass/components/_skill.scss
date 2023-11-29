@@ -1,0 +1,56 @@
+.skill {
+    height: 37rem;
+}
+
+// .profil_droit {
+//     text-align: center;
+// }
+@include phone() {
+
+}
+
+@include tablet() {
+
+}
+
+@include desktop() {
+    .skill {
+        display: flex;
+        .moitie {
+            width: 50%;
+        }
+        #Logiciel {
+            display: flex;
+            flex-direction: column;
+            .logiciel {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-template-areas: 
+                "html css js . . . "
+                "php mysql . . . ."
+                ". . . . . ."
+                ". . . . . ."
+                ;
+            }
+        }
+    }
+    .html {
+        grid-area: html;
+    }
+    .css {
+        grid-area: css;
+    }
+    .js {
+        grid-area: js;
+    }
+    .jquery {
+        grid-area: jquery;
+    }
+    .php {
+        grid-area: php;
+    }
+    .mysql {
+        grid-area: mysql;
+    }
+}
