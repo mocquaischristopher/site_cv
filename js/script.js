@@ -1,5 +1,6 @@
 // Déclarations des variables
-let btnScroll = document.getElementById("btn_scroll")
+let btnScroll = document.getElementById("btn_scroll");
+let nav = document.getElementById("menu_nav");
 
 // Déclaration des fonctions
 window.onscroll = function() { scrollFunction() };
@@ -17,4 +18,14 @@ function scrollTopFunction() {
     document.body.scrollTop = 0;
     // for other navigator
     document.documentElement.scrollTop = 0;
+}
+
+function openNav(){
+    nav.style.width = "100%";
+    nav.style.display = "block";
+}
+
+function closeNav(){
+    nav.style.width = "0";
+    nav.style.display = "none"
 }
