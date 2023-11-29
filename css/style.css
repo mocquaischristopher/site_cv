@@ -38,6 +38,64 @@ h2, h3, h4, h5, h6 {
   border: none;
 }
 
+.profil {
+  height: 37rem;
+}
+
+.profil_droit {
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .profil {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .profil #Profil p {
+    padding-bottom: 5%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .profil {
+    height: 32rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profil #Profil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .profil #Profil p {
+    padding-bottom: 4%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .profil {
+    height: 30rem;
+    display: flex;
+  }
+  .profil #Profil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .profil .moitie {
+    width: 50%;
+  }
+  .profil .profil_droit {
+    text-align: center;
+  }
+  .profil .profil_droit p {
+    font-size: 1.15em;
+  }
+  .profil .profil_droit img {
+    height: 70%;
+    padding: 5% 0;
+  }
+}
 header {
   background-color: #cae8ff;
   background-blend-mode: soft-light;
@@ -214,6 +272,42 @@ nav #menu_nav ul li a {
   }
   .menu_burger {
     display: none;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+h2, h3, h4, h5, h6 {
+  text-align: center;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+h3 {
+  font-size: 2.5em;
+  color: #1e73be;
+  padding: 25px 0;
+  text-transform: uppercase;
+}
+
+p {
+  padding: 0 1.5rem;
+  font-size: 1.15em;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.background_grey {
+  background-color: #f5f5f5;
+}
+
+@media screen and (min-width: 1024px) {
+  p {
+    font-size: 1.5em;
   }
 }
 
