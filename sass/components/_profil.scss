@@ -1,0 +1,63 @@
+.profil {
+    height: 37rem;
+}
+
+.profil_droit {
+    text-align: center;
+}
+@include phone() {
+    .profil {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        #Profil {
+            p {
+                padding-bottom: 5%;
+            }
+        }
+    }
+
+}
+
+@include tablet() {
+    .profil {
+        height: 32rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #Profil {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p {
+                padding-bottom: 4%;
+            }
+        }
+    }
+}
+
+@include desktop() {
+    .profil {
+        height: 30rem;
+        display: flex;
+        #Profil {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .moitie{
+            width: 50%;
+        }
+        
+        .profil_droit {
+            text-align: center;
+            p {
+                font-size: 1.15em;
+            }
+            img {
+                height: 70%;
+                padding: 5% 0;
+            }
+        }
+    }
+}
