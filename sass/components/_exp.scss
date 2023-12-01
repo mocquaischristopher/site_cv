@@ -1,0 +1,31 @@
+#Experience {
+    section {
+        padding-bottom: 5%;
+    }
+    section, article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@include phone {
+    #Experience {
+        img {
+            width: 50%;
+        }
+    }
+}
+
+@include desktop {
+    #Experience {
+        display: flex;
+        flex-direction: column;
+        section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}
