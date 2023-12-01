@@ -312,16 +312,14 @@ nav {
   background-color: #1e73be;
   z-index: 4;
 }
+nav #menu_nav {
+  background-color: #1e73be;
+}
 nav #menu_nav .closeNav {
   display: none;
 }
 nav #menu_nav ul {
-  position: relative;
-  top: 0;
   width: 100%;
-}
-nav #menu_nav ul li {
-  background-color: #1e73be;
 }
 nav #menu_nav ul li:hover {
   background-color: black;
@@ -359,6 +357,12 @@ nav #menu_nav ul li a {
     top: 2%;
     z-index: 1;
   }
+  #menu_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
   #menu_nav ul li a {
     font-size: 3rem;
     padding: 4%;
@@ -392,6 +396,12 @@ nav #menu_nav ul li a {
     top: 2%;
     z-index: 1;
   }
+  #menu_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
   #menu_nav ul li a {
     font-size: 3rem;
     padding: 3%;
@@ -409,6 +419,7 @@ nav #menu_nav ul li a {
 @media screen and (min-width: 1024px) {
   nav {
     position: sticky;
+    top: 0;
     z-index: 2;
   }
   nav .close_nav {

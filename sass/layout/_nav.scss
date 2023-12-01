@@ -3,15 +3,13 @@ nav {
     // position: fixed;
     z-index: 4;
     #menu_nav {
+        background-color: #1e73be;
         .closeNav {
             display: none;
         }
         ul {
-            position: relative;
-            top: 0;
             width: 100%;
             li {
-                background-color: #1e73be;
                 &:hover {
                     background-color: black;
                 }
@@ -51,6 +49,10 @@ nav {
             z-index: 1;
         }
         ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
             li {
                 a {
                     font-size: 3rem;
@@ -88,6 +90,10 @@ nav {
             z-index: 1;
         }
         ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
             li {
                 a {
                     font-size: 3rem;
@@ -110,8 +116,8 @@ nav {
 @include desktop() {
     nav {
         position: sticky;
+        top: 0;
         z-index: 2;
-        // width: 100%;
         .close_nav {
             display: none;
         }
