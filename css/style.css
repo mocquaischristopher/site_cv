@@ -244,6 +244,9 @@ h2 {
     justify-content: space-around;
     align-items: center;
   }
+  #Experience .EKNA, #Experience .ATIS, #Experience .Elf {
+    flex-direction: row-reverse;
+  }
 }
 header {
   background-color: #cae8ff;
