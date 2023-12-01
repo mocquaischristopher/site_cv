@@ -1,16 +1,122 @@
-.skill {
-    height: 37rem;
+.logiciel {
+    display: grid;
+    article {
+        padding-bottom: 20%;
+    }
+    .redim>img{
+        height: 100px;
+    }
+    
+    .html {
+    grid-area: html;
+    }
+    .css {
+    grid-area: css;
+    }
+    .sass {
+    grid-area: sass;
+    }
+    .js {
+    grid-area: js;
+    }
+    .jquery {
+    grid-area: jquery;
+    }
+    .typescript {
+    grid-area: typescript;
+    }
+    .php {
+    grid-area: php;
+    }
+    .mysql {
+    grid-area: mysql;
+    }
+    .postgres {
+    grid-area: postgres;
+    }
+    .nodejs {
+    grid-area: nodejs;
+    }
+    .popos {
+    grid-area: popos;
+    }
+    .mocha {
+    grid-area: mocha;
+    }
+    .atom {
+    grid-area: atom;
+    }
+    .vscode {
+    grid-area: vscode;
+    }
+    .bootstrap {
+    grid-area: bootstrap;
+    }
+    .angular {
+    grid-area: angular;
+    }
+    .symfony {
+    grid-area: symfony;
+    }
+    .react {
+    grid-area: react;
+    }
+    .canvafigma {
+    grid-area: canvafigma;
+    }
+    .figma {
+    grid-area: figma;
+    }
+    .xd {
+    grid-area: xd;
+    }
+    .photoshop {
+    grid-area: photoshop;
+    }
+    .illustrator {
+    grid-area: illustrator;
+    }
+    .indesign {
+    grid-area: indesign;
+    }
 }
 
-// .profil_droit {
-//     text-align: center;
-// }
 @include phone() {
-
+    #Logiciel {
+        margin-left: 5%;
+        .logiciel {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            "html css sass"
+            "js jquery typescript"
+            "php mysql postgres"
+            "nodejs popos mocha"
+            "atom vscode bootstrap"
+            "angular symfony react"
+            "canva figma xd"
+            "photoshop illustrator indesign"
+            ;
+        }
+    }
 }
 
 @include tablet() {
-
+    #Logiciel {
+        margin-left: 5%;
+        .logiciel {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            "html css sass js"
+            "jquery typescript php mysql"
+            "postgres nodejs popos mocha"
+            "atom vscode bootstrap angular"
+            "symfony react canva figma"
+            "xd photoshop illustrator indesign"
+            ;
+        }
+    }
 }
 
 @include desktop() {
@@ -19,38 +125,27 @@
         .moitie {
             width: 50%;
         }
+        #Competence {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
         #Logiciel {
             display: flex;
             flex-direction: column;
             .logiciel {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
                 grid-template-areas: 
-                "html css js . . . "
-                "php mysql . . . ."
-                ". . . . . ."
-                ". . . . . ."
+                "html css sass js"
+                "jquery typescript php mysql"
+                "postgres nodejs popos mocha"
+                "atom vscode bootstrap angular"
+                "symfony react canva figma"
+                "xd photoshop illustrator indesign"
                 ;
             }
+            
         }
-    }
-    .html {
-        grid-area: html;
-    }
-    .css {
-        grid-area: css;
-    }
-    .js {
-        grid-area: js;
-    }
-    .jquery {
-        grid-area: jquery;
-    }
-    .php {
-        grid-area: php;
-    }
-    .mysql {
-        grid-area: mysql;
     }
 }
