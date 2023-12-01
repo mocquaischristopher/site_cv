@@ -29,6 +29,15 @@ body {
     margin: 0;
 }
 
+#Profil, #Competence, #Logiciel, #Experience, 
+#Portfolio, #Diplome {
+    padding: 70px 0;
+}
+
+#Contact {
+    padding-top: 70px;
+}
+
 .background_grey {
     background-color: $background-grey;
 }
