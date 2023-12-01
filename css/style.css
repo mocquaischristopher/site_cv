@@ -5,8 +5,7 @@
 
 @font-face {
   font-family: "gagalin";
-  src: url("Gagalin-Regular.eot");
-  src: url("../../css/Gagalin-Regular.ttf") format("truetype");
+  src: url("Gagalin-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +14,7 @@
 }
 
 h1 {
-  font-family: "Gagalin", "sans-serif";
+  font-family: "gagalin", "sans-serif";
 }
 
 h2, h3, h4, h5, h6 {
@@ -23,7 +22,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .cv_haut, .cv_bas, #port_ouvert, #port_fermer {
-  font-family: "Gagalin", "sans-serif";
+  font-family: "gagalin", "sans-serif";
 }
 
 #btn_scroll {
@@ -96,10 +95,108 @@ h2, h3, h4, h5, h6 {
     padding: 5% 0;
   }
 }
-.skill {
-  height: 37rem;
+.logiciel {
+  display: grid;
+}
+.logiciel article {
+  padding-bottom: 20%;
+}
+.logiciel .redim > img {
+  height: 100px;
+}
+.logiciel .html {
+  grid-area: html;
+}
+.logiciel .css {
+  grid-area: css;
+}
+.logiciel .sass {
+  grid-area: sass;
+}
+.logiciel .js {
+  grid-area: js;
+}
+.logiciel .jquery {
+  grid-area: jquery;
+}
+.logiciel .typescript {
+  grid-area: typescript;
+}
+.logiciel .php {
+  grid-area: php;
+}
+.logiciel .mysql {
+  grid-area: mysql;
+}
+.logiciel .postgres {
+  grid-area: postgres;
+}
+.logiciel .nodejs {
+  grid-area: nodejs;
+}
+.logiciel .popos {
+  grid-area: popos;
+}
+.logiciel .mocha {
+  grid-area: mocha;
+}
+.logiciel .atom {
+  grid-area: atom;
+}
+.logiciel .vscode {
+  grid-area: vscode;
+}
+.logiciel .bootstrap {
+  grid-area: bootstrap;
+}
+.logiciel .angular {
+  grid-area: angular;
+}
+.logiciel .symfony {
+  grid-area: symfony;
+}
+.logiciel .react {
+  grid-area: react;
+}
+.logiciel .canvafigma {
+  grid-area: canvafigma;
+}
+.logiciel .figma {
+  grid-area: figma;
+}
+.logiciel .xd {
+  grid-area: xd;
+}
+.logiciel .photoshop {
+  grid-area: photoshop;
+}
+.logiciel .illustrator {
+  grid-area: illustrator;
+}
+.logiciel .indesign {
+  grid-area: indesign;
 }
 
+@media only screen and (max-width: 767px) {
+  #Logiciel {
+    margin-left: 5%;
+  }
+  #Logiciel .logiciel {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "html css sass" "js jquery typescript" "php mysql postgres" "nodejs popos mocha" "atom vscode bootstrap" "angular symfony react" "canva figma xd" "photoshop illustrator indesign";
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #Logiciel {
+    margin-left: 5%;
+  }
+  #Logiciel .logiciel {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "html css sass js" "jquery typescript php mysql" "postgres nodejs popos mocha" "atom vscode bootstrap angular" "symfony react canva figma" "xd photoshop illustrator indesign";
+  }
+}
 @media screen and (min-width: 1024px) {
   .skill {
     display: flex;
@@ -107,33 +204,19 @@ h2, h3, h4, h5, h6 {
   .skill .moitie {
     width: 50%;
   }
+  .skill #Competence {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .skill #Logiciel {
     display: flex;
     flex-direction: column;
   }
   .skill #Logiciel .logiciel {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "html css js . . . " "php mysql . . . ." ". . . . . ." ". . . . . .";
-  }
-  .html {
-    grid-area: html;
-  }
-  .css {
-    grid-area: css;
-  }
-  .js {
-    grid-area: js;
-  }
-  .jquery {
-    grid-area: jquery;
-  }
-  .php {
-    grid-area: php;
-  }
-  .mysql {
-    grid-area: mysql;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "html css sass js" "jquery typescript php mysql" "postgres nodejs popos mocha" "atom vscode bootstrap angular" "symfony react canva figma" "xd photoshop illustrator indesign";
   }
 }
 header {
@@ -147,7 +230,6 @@ header {
 }
 header h1 {
   font-weight: normal;
-  font-size: 4em;
   margin: 0;
   padding: 25px;
   text-align: center;
@@ -155,7 +237,6 @@ header h1 {
 }
 header h2 {
   color: black;
-  font-size: 3em;
   margin: 0;
   padding: 20px 0;
   text-align: center;
@@ -177,6 +258,30 @@ header a:hover {
   color: white;
 }
 
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 3em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 3em;
+  }
+}
 nav {
   background-color: #1e73be;
   z-index: 4;
@@ -284,8 +389,8 @@ nav #menu_nav ul li a {
     display: none;
   }
   nav #menu_nav {
-    display: block;
-    width: 100%;
+    display: block !important;
+    width: 100% !important;
   }
   nav #menu_nav ul {
     margin: 0;
