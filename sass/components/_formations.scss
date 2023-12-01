@@ -1,0 +1,102 @@
+#Diplome {
+    padding-bottom: 5%;
+    .container_card {
+        display: grid;
+        .card {
+            .card-face {
+                border-radius: 5px;
+                height: 200px;
+                transition: 0.5s;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            }
+            .card-faceRecto,
+            .card-faceVerso {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .card-faceRecto {
+                background-color: #f5f5f5;
+                transition: 0.5s;
+                transform: translateY(25%);
+            }
+            .card-faceVerso {
+                background: #d1c5fb;
+                opacity: 0;
+                flex-direction: column;
+                box-sizing: border-box;
+                transform: translateY(10%);
+                overflow: hidden;
+            }
+        }
+        .card:hover {
+            .card-faceRecto,
+            .card-faceVerso {
+                transform: translateY(0);
+                padding: 0;
+            }
+            .card-faceRecto {
+                background: #1e73be;
+            }
+            .card-faceVerso {
+                flex-flow: column wrap;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.card1 {
+    grid-area: card1;
+}
+.card2 {
+    grid-area: card2;
+}
+.card3 {
+    grid-area: card3;
+}
+.card4 {
+    grid-area: card4;
+}
+.card5 {
+    grid-area: card5;
+}
+
+@include phone() {
+    .container_card {
+        grid-template-columns:0.5fr 1fr 0.5fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        ". card1 ."
+        ". card2 ."
+        ". card3 ."
+        ". card4 ."
+        ". card5 ."
+        ;
+    }
+}
+
+@include tablet() {
+    .container_card {
+        grid-template-columns:0.5fr 1fr 0.5fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        ". card1 ."
+        ". card2 ."
+        ". card3 ."
+        ". card4 ."
+        ". card5 ."
+        ;
+    }
+}
+
+@include desktop() {
+    .container_card {
+        grid-template-columns:0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        ". card1 . card2 . card3 ."
+        ". card4 . card5 . . ."
+        ;
+    }
+}
