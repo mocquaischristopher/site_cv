@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
-h2, h3, h4, h5, h6 {
+h2, h3, h4 {
     text-align: center;
     margin: 0;
     padding: 2rem 0;
@@ -13,6 +13,10 @@ h3 {
     color: $colour-nav;
     padding: 25px 0;
     text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1.5em;
 }
 
 p {
@@ -27,6 +31,16 @@ body {
 
 .background_grey {
     background-color: $background-grey;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 1.20em;
+}
+
+.em {
+    font-style: italic;
+    font-size: 1.15em;
 }
 
 @include desktop() {
