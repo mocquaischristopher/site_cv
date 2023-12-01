@@ -1,12 +1,11 @@
 @font-face {
     font-family: "gagalin";
-    src: url("Gagalin-Regular.eot");
-    src: url("../../css/Gagalin-Regular.ttf") format("truetype");
+    src: url("Gagalin-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
-$font-family-gagalin: "Gagalin", "sans-serif";
+$font-family-gagalin: "gagalin", "sans-serif";
 $font-family-monserrat: "Montserrat", sans-serif;
 $font-family-source: "Source Sans Pro", sans-serif;
 
