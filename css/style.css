@@ -333,6 +333,141 @@ h2 {
     grid-template-areas: ". card1 . card2 . card3 ." ". card4 . card5 . . .";
   }
 }
+#Contact {
+  padding-bottom: 2%;
+}
+
+.footer-map {
+  background-image: url(../img/footer/map-footer.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.cv_bas {
+  display: block;
+  text-align: center;
+  background-color: #1e73be;
+  box-shadow: 2px 2px 6px black;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+  margin: auto;
+}
+
+.cv_bas:hover {
+  background-color: black;
+}
+
+.copyright {
+  text-align: center;
+  padding: 33px 0 15px 0;
+}
+
+.photo {
+  text-align: center;
+}
+
+.footer-title {
+  grid-area: footertitle;
+}
+
+.footer-lien {
+  grid-area: footerlien;
+}
+
+.footer-cv {
+  grid-area: footercv;
+}
+
+.footer-map {
+  grid-area: footermap;
+}
+
+@media only screen and (max-width: 767px) {
+  #Contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.3fr 0.4fr 0.8fr;
+    grid-template-areas: ". footertitle ." ". footerlien ." ". footercv ." "footermap footermap footermap";
+  }
+  #Contact .footer-lien {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #Contact .footer-lien p {
+    display: none;
+  }
+  #Contact .footer-lien article {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2%;
+  }
+  #Contact .cv_bas {
+    width: 150px;
+    border-radius: 5px;
+    padding: 5px 50px;
+  }
+  #Contact .footer-map {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #Contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.3fr 0.4fr 0.8fr;
+    grid-template-areas: ". footertitle ." ". footerlien ." ". footercv ." "footermap footermap footermap";
+  }
+  #Contact .footer-lien {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #Contact .footer-lien p {
+    display: none;
+  }
+  #Contact .footer-lien article {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2%;
+  }
+  #Contact .cv_bas {
+    width: 150px;
+    border-radius: 5px;
+    padding: 5px 50px;
+  }
+  #Contact .footer-map {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #Contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.3fr;
+    grid-template-areas: "footertitle footertitle" "footerlien footermap" "footercv footermap";
+  }
+  #Contact .footer-lien {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  #Contact .footer-lien article {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2%;
+  }
+  #Contact .cv_bas {
+    width: 150px;
+    border-radius: 5px;
+    padding: 5px 50px;
+  }
+  #Contact .footer-map {
+    height: 400px;
+  }
+}
 header {
   background-color: #cae8ff;
   background-blend-mode: soft-light;
@@ -573,6 +708,15 @@ p {
 body {
   padding: 0;
   margin: 0;
+}
+
+#Profil, #Competence, #Logiciel, #Experience,
+#Portfolio, #Diplome {
+  padding: 70px 0;
+}
+
+#Contact {
+  padding-top: 70px;
 }
 
 .background_grey {
