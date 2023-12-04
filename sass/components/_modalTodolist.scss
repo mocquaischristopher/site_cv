@@ -1,0 +1,78 @@
+.modal_3_content {
+    background-image: url("../img/portfolio/modal3/fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.modal_3_body {
+
+    .modal_3_h1 {
+        text-align: center;
+    }
+    section {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 0.3fr 1fr;
+        gap: 0, 15px;
+        grid-template-areas: ". inputText buttonAdd .";
+        & .modal_3_text {
+            grid-area: inputText;
+        }
+        & .modal-3-add {
+            grid-area: buttonAdd;
+            cursor: pointer;
+            background-color: greenyellow;
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 0.2fr 0.2fr;
+            grid-template-areas: "p pencil croix";
+            cursor: pointer;
+            position: relative;
+            font-size: 1em;
+            padding: 12px 8px 12px 40px;
+            & p {
+                grid-area: p;
+                margin: 0;
+                font-size: 2em;
+                color: $colour-modal_3_blue;
+            }
+            & .update {
+                grid-area: pencil;
+                background-color: deepskyblue;
+                text-decoration: none;
+            }
+            & .delete {
+                grid-area: croix;
+                background-color: red;
+                text-decoration: none;
+            }
+            & .update,
+            & .delete {
+                cursor: pointer;
+                width: 50%;
+            }
+        }
+        .checked {
+            background: $colour-modal_3_green;
+            color: $colour-modal_3_white;
+            text-decoration: underline;
+        }
+        .checked::before {
+            content: "";
+            position: absolute;
+            border-color: $colour-modal_3_white;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 15px;
+            width: 7px;
+        }
+    }
+}

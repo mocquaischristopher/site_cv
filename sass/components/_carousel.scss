@@ -1,0 +1,115 @@
+#Portfolio {
+    overflow: hidden;
+    .carousel {
+        position: relative;
+        .carousel-inner {
+            display: flex;
+            overflow: hidden;
+            height: 50vh;
+            flex-wrap: nowrap;
+            .slide {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex: 0 0 100%;
+                height: 100%;
+                transition: 0.7s ease-in-out;
+                // figure {
+                //     height: 100%;
+                //     img {
+                //         height: 100%;
+                //         object-fit: cover;
+                //     }
+                // }
+                p {
+                    padding-bottom: 3%;
+                }
+                .button_modal {
+                    border: none;
+                    background-color: #1e73be;
+                    box-shadow: 2px 2px 6px black;
+                    font-size: 2rem;
+                    color: white;
+                    width: 150px;
+                    border-radius: 5px;
+                    &:hover {
+                        background-color: black;
+                    }
+                }
+            }
+        }
+        .carousel-dots {
+            position: absolute;
+            /* Les points sont absolument positionnés */
+            z-index: 3;
+            /* Ils sont placés au-dessus des autres éléments */
+            left: 50%;
+            /* La distance à gauche est de 50% */
+            right: 50%;
+            /* La distance à droite est de 50% */
+            display: flex;
+            /* Affiche les points en ligne */
+            justify-content: center;
+            /* Centrage des points */
+            .dot {
+                border-radius: 50%;
+                margin: 5px;
+                cursor: pointer;
+            }
+            .active {
+                border: 10px solid $colour-nav !important;
+            }
+            .inactive {
+                border: 10px solid $colour-grey;
+            }
+        }
+    }
+    #modal_1, #modal_2, #modal_3, #modal_4,
+    #modal_5, #modal_6 {
+        display: none;
+
+    }
+    .modal {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 77px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 4;
+        .modal_content {
+            position: relative;
+            width: 80%;
+            height: 80%;
+            padding: 25px;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-color: white;
+            overflow: scroll;
+            margin: auto;
+            a {
+                width: 35px;
+                height: 35px;
+                background-color: #c0c0c0;
+                border-radius: 50px;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                cursor: pointer;
+                font-size: 2em;
+                text-align: center;
+            }
+            article {
+                width: 70vh;
+                text-align: center;
+                margin: 0 auto;
+                figure {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

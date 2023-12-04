@@ -11,13 +11,13 @@
     text-align: center;
     background-color: #1e73be;
     box-shadow:2px 2px 6px black;
-    font-size: 40px;
+    font-size: 4rem;
     color: white;
     text-decoration: none;
     margin: auto;
-  }
-  .cv_bas:hover {
-    background-color: black;
+    &:hover {
+        background-color: black;
+    }
   }
   .copyright{
     text-align: center;
