@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "gagalin";
+    src: url("Gagalin-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-family-gagalin: "gagalin", "sans-serif";
+$font-family-monserrat: "Montserrat", sans-serif;
+$font-family-source: "Source Sans Pro", sans-serif;
+
+* {
+    font-family: $font-family-source;
+}
+
+h1, h3, h4 {
+    font-family: $font-family-gagalin;
+}
+
+h2 {
+    font-family: $font-family-monserrat;
+}
+
+.cv_haut, .cv_bas, .button_modal, #port_ouvert, #port_fermer {
+    font-family: $font-family-gagalin;
+}

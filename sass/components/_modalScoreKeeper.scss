@@ -1,0 +1,54 @@
+.modal_content_5 {
+    background-image: url("../img/portfolio/modal5/fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.modal_5_body {
+    text-align: center;
+    .modal_5_h1 {
+        color: $colour-modal_5_title;
+    }
+}
+
+.modal_5_scorePlayer1 {
+    color: $colour-modal_5_player1;
+}
+.modal_5_player1 {
+    background-color: $colour-modal_5_player1;
+    color: $colour-modal_5_white;
+}
+.modal_5_scorePlayer2 {
+    color: $colour-modal_5_player2;
+}
+.modal_5_player2 {
+    background-color: $colour-modal_5_player2;
+    color: $colour-modal_5_white;
+}
+.modal_5_scoreTotal {
+    color: $colour-modal_5_reset;
+}
+.modal_5_reset {
+    background-color: $colour-modal_5_reset;
+    color: $colour-modal_5_white;
+}
+.modal_5_player1,
+.modal_5_player2,
+.modal_5_number,
+.modal_5_reset {
+    border-radius: 15%;
+    cursor: pointer;
+}
+
+.modal_5_score,
+.modal_5_buttons,
+.modal_5_winner {
+    font-size: 1rem;
+}
+
+@include desktop() {
+    .modal_5_score,
+    .modal_5_buttons,
+    .modal_5_winner {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,59 @@
+html {
+    scroll-behavior: smooth;
+}
+
+h2, h3, h4 {
+    text-align: center;
+    margin: 0;
+    padding: 2rem 0;
+}
+
+h3 {
+    font-size: 2.5em;
+    color: $colour-nav;
+    padding: 25px 0;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+p {
+    padding: 0 1.5rem;
+    font-size: 1.15em;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#Profil, #Competence, #Logiciel, #Experience, 
+#Portfolio, #Diplome {
+    padding: 10rem 0;
+}
+
+#Contact {
+    padding-top: 70px;
+}
+
+.background_grey {
+    background-color: $background-grey;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 1.20em;
+}
+
+.em {
+    font-style: italic;
+    font-size: 1.15em;
+}
+
+@include desktop() {
+    p {
+        font-size: 1.5em;
+    }
+}

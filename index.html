@@ -1,16 +1,521 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" dir="ltr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <title>My app</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Site CV Mocquais Christopher">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex, nofollow">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="./css/style.css">
 
-<body>
-    <h1 class="heading">My app</h1>
-</body>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&family=Source+Sans+Pro&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous" />
+        <title>Mocquais-Christopher-CV</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>CHRISTOPHER MOCQUAIS</h1>
+            <h2>Concepteur Développeur d'Application</h2>
+            <a class="cv_haut" href="./img/cv/CV-MOCQUAIS-CHRISTOPHER.pdf" target="_blank"
+                download="cv-mocquais-christopher.pdf">CV</a>
+        </header>
+        <nav>
+            <section id="menu_nav">
+                <a class="close_nav" onclick="closeNav()">
+                    ×
+                </a>
+                <ul>
+                    <li><a href="#Profil" onclick="closeNav()">Profil</a></li>
+                    <li><a href="#Competence" onclick="closeNav()">Compétences</a></li>
+                    <li><a href="#Logiciel" onclick="closeNav()">Logiciels</a></li>
+                    <li><a href="#Experience" onclick="closeNav()">Expériences</a></li>
+                    <li><a href="#Portfolio" onclick="closeNav()">Portfolio</a></li>
+                    <li><a href="#Diplome" onclick="closeNav()">Diplômes</a></li>
+                    <li><a href="#Contact" onclick="closeNav()">Contact</a></li>
+                </ul>
+            </section>
+            <div class="menu_burger">
+                <span class="icon_burger" onclick="openNav()">≡</span>
+            </div>
+        </nav>
+        <main>
+            <section class="profil background_grey">
+                <section id="Profil" class="moitie">
+                    <h3>à propos</h3>
+                    <p>Intéresser par le domaine du numérique, j'ai décidé de développer mes connaissances et mes
+                        compétences à travers l'atelier numérique de l'Association Ageval.<br />
+                        Toujours désireux d'apprendre, j'ai développé mon savoir-être à travers mes expériences
+                        précédentes tels que la motivation, la ponctualité et le travail en équipe.</p>
+                </section>
+                <section class="moitie profil_droit">
+                    <img src="img/profil/illustration.png" alt="dessin photo">
+                    <p class="illustrer">Illustration faîte par Decroue Laura.</p>
+                </section>
+                <p class="clear"></p>
+            </section>
+            <section class="skill">
+                <section id="Competence" class="moitie">
+                    <h3>Compétences</h3>
+                    <p>Assister en centre de services informatiques et numériques auprès des entreprises et des
+                        particuliers.<br />
+                        Intervenir et assister sur les accès et les services de réseaux numériques.<br />
+                        Utiliser l’invit. de commandes (tâches de maintenances).<br />
+                        Veille informatique.<br />
+                        Analyser les caractéristiques d’un PC et optimiser ses performances (RAM, défragmentation, ...).
+                    </p>
+                </section>
+                <section id="Logiciel" class="moitie">
+                    <h3>Logiciels</h3>
+                    <section class="logiciel">
+                        <article class="redim html">
+                            <img class="div-img" src="./img/skills/html5.png" alt="icone HTML5">
+                        </article>
+                        <article class="redim css">
+                            <img class="div-img" src="./img/skills/css3.png" alt="icone CSS3">
+                        </article>
+                        <article class="redim sass">
+                            <img class="div-img" src="./img/skills/sass.png" alt="icone SASS">
+                        </article>
+                        <article class="redim js">
+                            <img class="div-img" src="./img/skills/js.png" alt="icone JavaScript">
+                        </article>
+                        <article class="redim jquery">
+                            <img class="div-img" src="./img/skills/jquery.png" alt="icone JQUERY">
+                        </article>
+                        <article class="redim typescript">
+                            <img class="div-img" src="./img/skills/typescript.png" alt="icone TypeScript">
+                        </article>
+                        <article class="redim php">
+                            <img class="div-img" src="./img/skills/php.png" alt="icone PHP">
+                        </article>
+                        <article class="redim mysql">
+                            <img class="div-img" src="./img/skills/mysql.png" alt="icone MySQL">
+                        </article>
+                        <article class="redim postgres">
+                            <img class="div-img" src="./img/skills/postgresql.png" alt="icone PostGreSQL">
+                        </article>
+                        <article class="redim nodejs">
+                            <img class="div-img" src="./img/skills/node-js.png" alt="icone NodeJS">
+                        </article>
+                        <article class="redim popos">
+                            <img class="div-img" src="./img/skills/pop-os.png" alt="icone PopOS">
+                        </article>
+                        <article class="redim mocha">
+                            <img class="div-img" src="./img/skills/mocha.png" alt="icone Mocha">
+                        </article>
+                        <article class="redim atom">
+                            <img class="div-img" src="./img/skills/atom.png" alt="icone Atom">
+                        </article>
+                        <article class="redim vscode">
+                            <img class="div-img" src="./img/skills/vscode.png" alt="icone VsCode">
+                        </article>
+                        <article class="redim bootstrap">
+                            <img class="div-img" src="./img/skills/bootstrap.png" alt="icone Bootstrap">
+                        </article>
+                        <article class="redim angular">
+                            <img class="div-img" src="./img/skills/angular.png" alt="icone Angular">
+                        </article>
+                        <article class="redim symfony">
+                            <img class="div-img" src="./img/skills/symfony.png" alt="icone Symfony">
+                        </article>
+                        <article class="redim react">
+                            <img class="div-img" src="./img/skills/reactjs.png" alt="icone React">
+                        </article>
+                        <article class="redim canva">
+                            <img class="div-img" src="./img/skills/canva.png" alt="icone Canva">
+                        </article>
+                        <article class="redim figma">
+                            <img class="div-img" src="./img/skills/figma.png" alt="icone Figma">
+                        </article>
+                        <article class="redim xd">
+                            <img class="div-img" src="./img/skills/adobe-xd.png" alt="icone AdobeXd">
+                        </article>
+                        <article class="redim photoshop">
+                            <img class="div-img" src="./img/skills/adobe-photoshop.png" alt="icone AdobePhotoshop">
+                        </article>
+                        <article class="redim illustrator">
+                            <img class="div-img" src="./img/skills/adobe-illustrator.png" alt="icone AdobeIllustrator">
+                        </article>
+                        <article class="redim indesign">
+                            <img class="div-img" src="./img/skills/adobe-indesign.png" alt="icone AdobeIndesign">
+                        </article>
+                    </section>
+                </section>
+            </section>
+            <section id="Experience" class="background_grey">
+                <h3>Expériences</h3>
+                <section class="Ageval2023">
+                    <article>
+                        <h4>Agent polyvalent informatique</h4>
+                        <p class="bold">Ageval | Septembre 2023</p>
+                        <p class="em">Assistant Encadrant Numérique,<br> Développeur d’un projet interne.</p>
+                    </article>
+                    <article>
+                        <img src="./img/experience/ageval.png" alt="logo Ageval">
+                    </article>
+                </section>
+                <section class="EKNA">
+                    <article>
+                        <h4>Développeur Full-Stack</h4>
+                        <p class="bold">Ekna | Mai 2022 - Juillet 2022</p>
+                        <p class="em">Site (MVP) en ExpressJs et ReactJs,<br> ORM Prisma (PostgreSQL), AWS, UML.</p>
+                    </article>
+                    <article>
+                        <img src="./img/experience/ekna.png" alt="logo Ekna">
+                    </article>
+                </section>
+                <section class="Ageval2020">
+                    <article>
+                        <h4>Agent polyvalent informatique</h4>
+                        <p class="bold">Ageval | Septembre 2020 - Juin 2021</p>
+                        <p class="em">Base programmation (HTML, CSS, JavaScript, PHP) /<br> Base WebDesign
+                            Culture Digital /<br> Refaire CV, E-réputation, Profil Linkedln.</p>
+                    </article>
+                    <article>
+                        <img src="./img/experience/ageval.png" alt="logo Ageval">
+                    </article>
+                </section>
+                <section class="ATIS">
+                    <article>
+                        <h4>Agent de maintenance informatique</h4>
+                        <p class="bold">A.T.I.S. | Novembre 2018 - Juillet 2019</p>
+                        <p class="em">Démonter les PC,<br> imprimantes et écrans (cathodique et écrans plats).<br>
+                            Installation de windows /<br> Nettoyage des poussières à l'intérieur des PC.<br>
+                            Sécurité des postes clients /<br> Changement pâte thermique /<br> Résoudre les
+                            dysfonctionnements.</p>
+                    </article>
+                    <article>
+                        <img src="./img/experience/atis.png" alt="logo Atis">
+                    </article>
+                </section>
+                <section class="AgriBeauce">
+                    <article>
+                        <h4>Travail saisonnier</h4>
+                        <p class="bold">AgriBeauce | Août 2011 - Octobre 2013</p>
+                        <p class="em">Tri des pommes de terre par rapport aux défaut en laboratoire.</p>
+                    </article>
+                    <article>
+                        <img src="./img/experience/agribeauce.png" alt="Logo AgriBeauce">
+                    </article>
+                </section>
+                <section class="Elf">
+                    <article>
+                        <h4>Employé polyvalent de station-service</h4>
+                        <p class="bold">Elf des Amazones | 2007 -2008</p>
+                        <p class="em">Conseils aux clients / Encaissements / Mise en rayon.</p>
+                    </article>
+                    <article>
+                        <img src="./img/experience/elf.png" alt="logo Elf">
+                    </article>
+                </section>
+            </section>
+            <section id="Portfolio">
+                <h3>Portfolio</h3>
+                <!-- Élément carrousel -->
+                <section class="carousel">
+                    <!-- Conteneur interne pour les diapositives -->
+                    <section class="carousel-inner">
+                        <!-- Première diapositive -->
+                        <article class="slide">
+                            <h4>Appli météo</h4>
+                            <p>Réalisation d'une application météo au sein de l'association Ageval
+                                avec HTML, SASS, JavaScript et API.</p>
+                            <button class="button_modal" id="button_modal_1">Voir plus</button>
+                        </article>
+                        <article class="slide">
+                            <h4>Monster Slayer</h4>
+                            <p>Réalisation d'un jeu de combat de monstres au sein de la formation Simplon
+                                avec HTML, SASS, JavaScript.</p>
+                            <button class="button_modal" id="button_modal_2">Voir plus</button>
+                        </article>
+                        <article class="slide">
+                            <h4>ToDoList</h4>
+                            <p>Réalisation d'une Liste de Courses au sein de la formation Simplon
+                                avec HTML, SASS, JavaScript.</p>
+                            <button class="button_modal" id="button_modal_3">Voir plus</button>
+                        </article>
+                        <article class="slide">
+                            <h4>Carousel</h4>
+                            <p>Réalisation d'un carousel d'images au sein de la formation Simplon
+                                avec HTML, SASS, JavaScript.</p>
+                            <button class="button_modal" id="button_modal_4">Voir plus</button>
+                        </article>
+                        <article class="slide">
+                            <h4>Score Keeper</h4>
+                            <p>Réalisation d'un marqueur de score au sein de la formation Simplon
+                                avec HTML, SASS, JavaScript.</p>
+                            <button class="button_modal" id="button_modal_5">Voir plus</button>
+                        </article>
+                        <article class="slide slide-column">
+                            <h4>Affiche Ageval</h4>
+                            <p>
+                                Réalisations d'affiches fictives réalisées au sein de l'association Ageval
+                                avec Photoshop, Illustrator et Indesign.</p>
+                            <button class="button_modal" id="button_modal_6">Voir plus</button>
+                        </article>
+                    </section>
+                    <!-- Conteneur pour les points de navigation -->
+                    <section class="carousel-dots"></section>
+                </section>
+                <section class="modal" id="modal_1">
+                    <section class="modal_content">
+                        <a id="close_modal_1">
+                            ×
+                        </a>
+                        <section>
+                            <h1>En cours de création</h1>
+                        </section>
+
+                    </section>
+                </section>
+                <section class="modal" id="modal_2">
+                    <section class="modal_content">
+                        <a id="close_modal_2">
+                            ×
+                        </a>
+                        <section class="modal_2_body background_grey">
+                            <h1 class="modal_2_h1">Monster Slayer</h1>
+                            <section class="modal_2_header">
+                                <article class="modal_2_player">
+                                    <h2>YOU</h2>
+                                    <aside class="modal_2_you">
+                                        <label for="modal_2_pvYou">Health : <span
+                                                class="modal_2_pvYou">100</span>%</label>
+                                        <progress id="modal_2_pvYou" min="0" max="100" value="100">100</progress>
+                                    </aside>
+                                </article>
+                                <article class="modal_2_no-player">
+                                    <h2>MONSTER</h2>
+                                    <aside class="modal_2_monster">
+                                        <label for="modal_2_pvMonster">Health : <span
+                                                class="modal_2_pvMonster">100</span>%</label>
+                                        <progress id="modal_2_pvMonster" min="0" max="100" value="100">100</progress>
+                                    </aside>
+                                </article>
+                            </section>
+                            <section class="modal_2_button">
+                                <button class="modal_2_start">START NEW GAME</button>
+                            </section>
+                            <section class="modal_2_buttons">
+                                <button class="modal_2_attack">ATTACK</button>
+                                <button class="modal_2_specialAttack">SPECIAL ATTACK</button>
+                                <button class="modal_2_heal">HEAL</button>
+                                <button class="modal_2_giveUp">GIVE UP</button>
+                            </section>
+                            <section class="modal_2_log">
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <section class="modal" id="modal_3">
+                    <section class="modal_content modal_3_content">
+                        <a id="close_modal_3">
+                            ×
+                        </a>
+                        <section class="modal_3_body">
+                            <h1 class="modal_3_h1">Ma liste de courses</h1>
+                            <section class="modal_3_main">
+                                <input type="text" class="modal_3_text" placeholder="Ajouter des éléments">
+                                <input class="modal_3_add" type="button" value="Ajoute une tâche">
+                            </section>
+                            <hr>
+                            <ul class="modal_3_ul"></ul>
+
+                        </section>
+                    </section>
+                </section>
+                <section class="modal" id="modal_4">
+                    <section class="modal_content modal_4_content">
+                        <a id="close_modal_4">
+                            ×
+                        </a>
+                        <section class="modal_4_body">
+                            <h1 class="modal_4_h1">Carousel</h1>
+                            <section class="modal_4_main">
+                                <button class="modal_4_previous">&laquo; Previous</button>
+                                <ul class="modal_4_carousel">
+                                    <li class="modal_4_li">
+                                        <figure><img src="./img/portfolio/modal4/circuit.jpg" alt="image d'un circuit imprimer"></figure>
+                                    </li>
+                                    <li class="modal_4_li">
+                                        <figure><img src="./img/portfolio/modal4/code.jpg" alt="image d'un code inscrit sur un écran">
+                                        </figure>
+                                    </li>
+                                    <li class="modal_4_li">
+                                        <figure><img src="./img/portfolio/modal4/lecteur.jpg"
+                                                alt="image d'un lecteur de disque avec la piste"></figure>
+                                    </li>
+                                    <li class="modal_4_li">
+                                        <figure><img src="./img/portfolio/modal4/code2.jpg"
+                                                alt="image d'une personne qui tape du code sur un ordinateur"></figure>
+                                    </li>
+                                </ul>
+                                <button class="modal_4_next">Next &raquo;</button>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <section class="modal" id="modal_5">
+                    <section class="modal_content modal_content_5">
+                        <a id="close_modal_5">
+                            ×
+                        </a>
+                        <section class="modal_5_body">
+                            <h1 class="modal_5_h1">Score Keeper</h1>  
+                            <section class="modal_5_score">
+                              <p>Joueur 1: <span class="modal_5_scorePlayer1">0</span> et Joueur 2: <span class="modal_5_scorePlayer2">0</span></p>
+                              <p>Jouer jusqu'à: <span class="modal_5_scoreTotal">0</span></p>
+                            </section> 
+                            <hr>
+                            <section class="modal_5_buttons">
+                              <p>veuillez choisir un nombre de départ :</p>
+                              <input type="number" class="modal_5_number" min="0" max="10" value="0">
+                              <button class="modal_5_player1">Joueur 1</button>
+                              <button class="modal_5_player2">Joueur 2</button>
+                              <button class="modal_5_reset">Reset</button>
+                            </section>
+                            <section class="modal_5_winner">
+                              <p><span class="modal_5_win"></span>  gagnant</p>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <section class="modal" id="modal_6">
+                    <section class="modal_content">
+                        <a id="close_modal_6">
+                            ×
+                        </a>
+                        <article>
+                            <figure>
+                                <img src="./img/portfolio/affiche_ageval.png" alt="Image 2">
+                            </figure>
+                            <figure>
+                                <img src="./img/portfolio/mémo_ageval.png" alt="Image 2">
+                            </figure>
+                            <figure>
+                                <img src="./img/portfolio/affiche_perso.png" alt="Image 2">
+                            </figure>
+                            <figure>
+                                <img src="./img/portfolio/volet_numerique_1.png" alt="Image 2">
+                            </figure>
+                            <figure>
+                                <img src="./img/portfolio/volet_numerique_2.png" alt="Image 2">
+                            </figure>
+                        </article>
+                    </section>
+                </section>
+            </section>
+            <section id="Diplome" class="background_grey">
+                <h3>Formations / Diplômes</h3>
+                <section class="container_card">
+                    <section class="card card1">
+                        <article class="card-face card-faceRecto">
+                            <h4>Formation Concepteur Développeur d'Applications</h4>
+                        </article>
+                        <article class="card-face card-faceVerso">
+                            <p class="bold">Simplon - Valenciennes | 2021 - 2022</p>
+                            <p class="em">Gestion de Projets & Conception de Projets.</p>
+                        </article>
+                    </section>
+                    <section class="card card2">
+                        <article class="card-face card-faceRecto">
+                            <h4>Formation Développeur Web & Web Mobile</h4>
+                        </article>
+                        <article class="card-face card-faceVerso">
+                            <p class="bold">Web Force 3 - Lille | 2021</p>
+                            <p class="em">Utilisation Frameworks / Conception site Symfony.</p>
+                        </article>
+                    </section>
+                    <section class="card card3">
+                        <article class="card-face card-faceRecto">
+                            <h4>Formation Technicien d'Assistance en Informatique</h4>
+                        </article>
+                        <article class="card-face card-faceVerso">
+                            <p class="bold">AFPA - Olivet | 2012 - 2013</p>
+                            <p class="em">Base assitance utilisateurs en informatique / Base Helpdesk.</p>
+                        </article>
+                    </section>
+                    <section class="card card4">
+                        <article class="card-face card-faceRecto">
+                            <h4>BAC Comptabilité</h4>
+                        </article>
+                        <article class="card-face card-faceVerso">
+                            <p class="bold">Lycée Colbert - La Celle St Cloud | 2008</p>
+                            <p class="em">Etablir facturations / Etablir bulletins de salaires / Bilans / Comptes de
+                                résultats / Etablir déclarations de TVA.</p>
+                        </article>
+                    </section>
+                    <section class="card card5">
+                        <article class="card-face card-faceRecto">
+                            <h4>BEP Comptabilité</h4>
+                        </article>
+                        <article class="card-face card-faceVerso">
+                            <p class="bold">Lycée Colbert - La Celle St Cloud | 2006</p>
+                            <p class="em">Tenir les livres d'achats / des ventes / et de banques / Gérer les stocks.</p>
+                        </article>
+                    </section>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <section id="Contact">
+                <h3 class="footer-title">Contact</h3>
+                <section class="footer-lien">
+                    <article>
+                        <a href="http://www.linkedin.com/in/christopher-mocquais" target="_blank">
+                            <img src="img/footer/linkedin.png" alt="Linkedin">
+                        </a>
+                        <p>Linkedin</p>
+                    </article>
+                    <article>
+                        <a href="http://www.github.com/mocquaischristopher" target="_blank">
+                            <img src="img/footer/github.png" alt="Github">
+                        </a>
+                        <p>Github</p>
+                    </article>
+                    <article>
+                        <a href="mailto:mocquais.christopher@gmail.com">
+                            <img class="mailto" src="img/footer/email.png" alt="lien email">
+                        </a>
+                        <p>Envoyer Mail</p>
+                    </article>
+                </section>
+                <section class="footer-cv">
+                    <article>
+                        <a class="cv_bas" href="./img/cv/CV-MOCQUAIS-CHRISTOPHER.pdf" target="_blank"
+                            download="cv-mocquais-christopher.pdf">CV</a>
+
+                    </article>
+                </section>
+                <section class="footer-map">
+
+                </section>
+            </section>
+        </footer>
+        <section class="copyright background_grey">
+            <p>Copyright © <span id="date"></span> Tous droits réservés.</p>
+        </section>
+        <button onclick="scrollTopFunction()" id="btn_scroll" title="Go to top">
+            <img src="./img/main/to_top.png" alt="Bouton de retour haut de l'écran">
+        </button>
+
+        <script src="./js/script.js"></script>
+        <script src="./js/meteo.js"></script>
+        <script src="./js/monsterSlayer.js"></script>
+        <script src="./js/todolist.js"></script>
+        <script src="./js/carousel.js"></script>
+        <script src="./js/scoreKeeper.js"></script>
+    </body>
 
 </html>

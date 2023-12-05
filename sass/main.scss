@@ -1,13 +1,26 @@
 @import "abstracts/functions";
+@import "abstracts/mixins";
 @import "abstracts/variables";
 
 @import "base/reset";
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/btnScroll";
 @import "components/buttons";
 @import "components/form";
+@import "components/profil";
+@import "components/skill";
+@import "components/exp";
+@import "components/formations";
+@import "components/carousel";
+@import "components/modalAppMeteo";
+@import "components/modalMonsterSlayer";
+@import "components/modalTodolist";
+@import "components/modalCarousel";
+@import "components/modalScoreKeeper";
 
 @import "layout/footer";
 @import "layout/header";
 @import "layout/nav";
+@import "layout/main";

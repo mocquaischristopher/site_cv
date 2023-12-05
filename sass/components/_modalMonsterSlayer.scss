@@ -1,0 +1,58 @@
+.modal_2_h1 {
+    color: $colour-modal_2_title;
+    text-align: center;
+}
+
+.modal_2_header {
+    display: flex;
+    & .modal_2_player {
+        & h2, aside {
+            color: $colour-modal_2_player;
+        }
+    }
+    & .modal_2_no-player {
+        & h2, aside {
+            color: $colour-modal_2_monster;
+        }
+    }
+    & progress {
+        -webkit-appearance: none;
+    }
+}
+
+.modal_2_button, .modal_2_buttons {
+    text-align: center;
+}
+.modal_2_start{
+    background-color: $colour-modal_2_button;
+}
+.modal_2_attack{
+    background-color: red;
+    color: white;
+}
+.modal_2_specialAttack {
+    background-color: orange;
+}
+.modal_2_heal {
+    background-color: $colour-modal_2_button;
+}
+.modal_2_giveUp {
+    background-color: grey;
+    color: white;
+}
+ul {
+    padding: 0;
+    background-color: honeydew;
+    & li {
+        text-decoration: none;
+        list-style: none;
+    }
+    & .blue {
+        color: $colour-modal_2_monster;
+        background-color: deepskyblue;
+    }
+    & .red {
+        color: red;
+        background-color: pink;
+    }
+}
