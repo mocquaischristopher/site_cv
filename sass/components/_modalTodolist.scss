@@ -1,5 +1,5 @@
 .modal_3_content {
-    background-image: url("../img/portfolio/modal3/fond.jpg");
+    background-image: url("../img/portfolio/modal3/fond.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -10,17 +10,22 @@
     }
     section {
         display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr 0.3fr 1fr;
-        gap: 0, 15px;
-        grid-template-areas: ". inputText buttonAdd .";
+        gap: 0 15px;
+        margin-bottom: 2%;
         & .modal_3_text {
             grid-area: inputText;
+            transition: width 0.5s ease-in-out;
         }
-        & .modal-3-add {
+        & .modal_3_text:focus {
+            background-color: $colour-modal_2_title;
+            color: white;
+        }
+        & .modal_3_add {
             grid-area: buttonAdd;
             cursor: pointer;
             background-color: greenyellow;
+            border-radius: 4px;
+            border: none;
         }
     }
     ul {
@@ -45,6 +50,7 @@
                 grid-area: pencil;
                 background-color: deepskyblue;
                 text-decoration: none;
+                
             }
             & .delete {
                 grid-area: croix;
@@ -54,7 +60,7 @@
             & .update,
             & .delete {
                 cursor: pointer;
-                width: 50%;
+                border-radius: 4px;
             }
         }
         .checked {
@@ -74,5 +80,81 @@
             height: 15px;
             width: 7px;
         }
+    }
+}
+
+@include phone() {
+    section {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 0.3fr 1fr;
+        gap: 0 15px;
+        grid-template-areas: ". inputText inputText ."
+        ". buttonAdd buttonAdd .";
+        .modal_3_text {
+            width: max-content;
+            margin-bottom: 10%;
+        }
+        .modal_3_text:focus {
+            width: max-content;
+        }
+    }
+    ul {
+        li {
+            & .update,
+            & .delete {
+                width: 70%;
+            }
+        }
+    }    
+}
+
+@include tablet() {
+    section {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 0.3fr 1fr;
+        gap: 0 15px;
+        grid-template-areas: ". inputText inputText ."
+        ". buttonAdd buttonAdd .";
+        & .modal_3_text {
+            width: 60%;
+            margin-bottom: 5%;
+        }
+        & .modal_3_text:focus {
+            width: 99%;
+        }
+
+    }
+    ul {
+        li {
+            & .update,
+            & .delete {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@include desktop() {
+    .modal_3_body {
+        section {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 0.3fr 1fr;
+            grid-template-areas: ". inputText buttonAdd .";
+            & .modal_3_text {
+                width: 35%;
+            }
+            & .modal_3_text:focus {
+                width: 70%;
+            }
+        }
+        ul {
+            li {
+                & .update,
+                & .delete {
+                    width: 50%;
+                }
+            }
+        }    
     }
 }

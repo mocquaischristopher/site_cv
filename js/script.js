@@ -1,7 +1,7 @@
+"use strict";
+
 // Déclarations des variables
-let btnScroll = document.getElementById("btn_scroll");
 let nav = document.getElementById("menu_nav");
-let copyright = document.getElementById("date");
 const slideTimeout = 5000;
 const slides = document.querySelectorAll(".slide")
 let dots;
@@ -12,21 +12,22 @@ let buttonModal2 = document.getElementById("button_modal_2");
 let buttonModal3 = document.getElementById("button_modal_3");
 let buttonModal4 = document.getElementById("button_modal_4");
 let buttonModal5 = document.getElementById("button_modal_5");
-let buttonModal6 = document.getElementById("button_modal_6");
 let openModal1 = document.getElementById("modal_1");
 let openModal2 = document.getElementById("modal_2");
 let openModal3 = document.getElementById("modal_3");
 let openModal4 = document.getElementById("modal_4");
 let openModal5 = document.getElementById("modal_5");
-let openModal6 = document.getElementById("modal_6");
 let closeModal1 = document.getElementById("close_modal_1");
 let closeModal2 = document.getElementById("close_modal_2");
 let closeModal3 = document.getElementById("close_modal_3");
 let closeModal4 = document.getElementById("close_modal_4");
 let closeModal5 = document.getElementById("close_modal_5");
-let closeModal6 = document.getElementById("close_modal_6");
+let copyright = document.getElementById("date");
+let btnScroll = document.getElementById("btn_scroll");
 
 // Déclaration des fonctions
+
+
 window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
@@ -81,7 +82,7 @@ dots = document.querySelectorAll('.dot');
 // Boucle pour ajouter des écouteurs d'événement "click" sur chaque "dot"
 dots.forEach((elt, key) => elt.addEventListener('click', () => slideTo(key)));
 // Initialisation de l'intervalle pour afficher les slides
-intervalId = setInterval(showSlide, slideTimeout)
+let intervalId = setInterval(showSlide, slideTimeout)
 // Boucle sur tous les éléments de type "slide" pour ajouter des écouteurs d'événement pour les interactions avec la souris et le toucher
 slides.forEach(elt => {
     let startX;
@@ -141,12 +142,6 @@ buttonModal5.addEventListener('click', function() {
 })
 closeModal5.addEventListener('click', function() {
     openModal5.style.display = "none";
-})
-buttonModal6.addEventListener('click', function() {
-    openModal6.style.display = "block";
-})
-closeModal6.addEventListener('click', function() {
-    openModal6.style.display = "none";
 })
 
 // date footer

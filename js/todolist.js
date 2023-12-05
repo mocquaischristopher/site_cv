@@ -1,16 +1,30 @@
 "use strict";
 
 let addButton = document.querySelector(".modal_3_add");
+let textInput = document.querySelector(".modal_3_text");
 addButton.addEventListener('click', add);
 let ul = document.querySelector(".modal_3_ul");
+
+// si entrer dans champ input lance la fonction add()
+textInput.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+        e.preventDefault();
+        add();
+    }
+})
+// si clic sur le bouton "ajoute une tâche" lance la fonction add()
+addButton.addEventListener("click", function(e) {
+    if(e.key === "Enter") {
+        e.preventDefault();
+        add();
+    }
+})
 
 function add() {
     let input = document.querySelector('.modal_3_text').value;
     if( input.trim() == "") {
         return;
     }
-
-    console.log(ul)
     let li = document.createElement("li");
     let p = document.createElement("p");
     p.addEventListener('click', checked);
@@ -49,12 +63,14 @@ function updat() {
 
 function del() {
     let li = this.parentElement;
-    li.remove();
+    let confirmDel = confirm("Etes-vous sur de vouloir supprimer la ligne");
+    if(confirmDel == true ) {
+        li.remove();
+    } 
 }
 
 function checked(e) {
     if (e.target.tagName == "P") {
         this.parentElement.classList.toggle("checked");
     }
-    
 }

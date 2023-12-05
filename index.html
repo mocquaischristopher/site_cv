@@ -33,7 +33,7 @@
         <nav>
             <section id="menu_nav">
                 <a class="close_nav" onclick="closeNav()">
-                    ×
+                    &#215;
                 </a>
                 <ul>
                     <li><a href="#Profil" onclick="closeNav()">Profil</a></li>
@@ -45,9 +45,9 @@
                     <li><a href="#Contact" onclick="closeNav()">Contact</a></li>
                 </ul>
             </section>
-            <div class="menu_burger">
+            <section class="menu_burger">
                 <span class="icon_burger" onclick="openNav()">≡</span>
-            </div>
+            </section>
         </nav>
         <main>
             <section class="profil background_grey">
@@ -246,28 +246,23 @@
                             <button class="button_modal" id="button_modal_3">Voir plus</button>
                         </article>
                         <article class="slide">
-                            <h4>Carousel</h4>
-                            <p>Réalisation d'un carousel d'images au sein de la formation Simplon
-                                avec HTML, SASS, JavaScript.</p>
-                            <button class="button_modal" id="button_modal_4">Voir plus</button>
-                        </article>
-                        <article class="slide">
                             <h4>Score Keeper</h4>
                             <p>Réalisation d'un marqueur de score au sein de la formation Simplon
                                 avec HTML, SASS, JavaScript.</p>
-                            <button class="button_modal" id="button_modal_5">Voir plus</button>
+                            <button class="button_modal" id="button_modal_4">Voir plus</button>
                         </article>
                         <article class="slide slide-column">
                             <h4>Affiche Ageval</h4>
                             <p>
                                 Réalisations d'affiches fictives réalisées au sein de l'association Ageval
                                 avec Photoshop, Illustrator et Indesign.</p>
-                            <button class="button_modal" id="button_modal_6">Voir plus</button>
+                            <button class="button_modal" id="button_modal_5">Voir plus</button>
                         </article>
                     </section>
                     <!-- Conteneur pour les points de navigation -->
                     <section class="carousel-dots"></section>
                 </section>
+                <!-- Modal App Meteo -->
                 <section class="modal" id="modal_1">
                     <section class="modal_content">
                         <a id="close_modal_1">
@@ -279,6 +274,7 @@
 
                     </section>
                 </section>
+                <!-- Modal Monster Slayer -->
                 <section class="modal" id="modal_2">
                     <section class="modal_content">
                         <a id="close_modal_2">
@@ -318,6 +314,7 @@
                         </section>
                     </section>
                 </section>
+                <!-- Modal todolist -->
                 <section class="modal" id="modal_3">
                     <section class="modal_content modal_3_content">
                         <a id="close_modal_3">
@@ -335,85 +332,67 @@
                         </section>
                     </section>
                 </section>
+                <!-- Modal Score Keeper -->
                 <section class="modal" id="modal_4">
-                    <section class="modal_content modal_4_content">
+                    <section class="modal_content modal_content_4">
                         <a id="close_modal_4">
                             ×
                         </a>
                         <section class="modal_4_body">
-                            <h1 class="modal_4_h1">Carousel</h1>
-                            <section class="modal_4_main">
-                                <button class="modal_4_previous">&laquo; Previous</button>
-                                <ul class="modal_4_carousel">
-                                    <li class="modal_4_li">
-                                        <figure><img src="./img/portfolio/modal4/circuit.jpg" alt="image d'un circuit imprimer"></figure>
-                                    </li>
-                                    <li class="modal_4_li">
-                                        <figure><img src="./img/portfolio/modal4/code.jpg" alt="image d'un code inscrit sur un écran">
-                                        </figure>
-                                    </li>
-                                    <li class="modal_4_li">
-                                        <figure><img src="./img/portfolio/modal4/lecteur.jpg"
-                                                alt="image d'un lecteur de disque avec la piste"></figure>
-                                    </li>
-                                    <li class="modal_4_li">
-                                        <figure><img src="./img/portfolio/modal4/code2.jpg"
-                                                alt="image d'une personne qui tape du code sur un ordinateur"></figure>
-                                    </li>
-                                </ul>
-                                <button class="modal_4_next">Next &raquo;</button>
+                            <h1 class="modal_4_h1">Score Keeper</h1>
+                            <section class="modal_4_score">
+                                <p>Score du Joueur 1: <span class="modal_4_scorePlayer modal_4_scorePlayer1">0</span>
+                                    Score du Joueur 2: <span class="modal_4_scorePlayer modal_4_scorePlayer2">0</span>
+                                </p>
+                                <p>Score à atteindre: <span class="modal_4_scoreTotal">0</span></p>
                             </section>
-                        </section>
-                    </section>
-                </section>
-                <section class="modal" id="modal_5">
-                    <section class="modal_content modal_content_5">
-                        <a id="close_modal_5">
-                            ×
-                        </a>
-                        <section class="modal_5_body">
-                            <h1 class="modal_5_h1">Score Keeper</h1>  
-                            <section class="modal_5_score">
-                              <p>Joueur 1: <span class="modal_5_scorePlayer1">0</span> et Joueur 2: <span class="modal_5_scorePlayer2">0</span></p>
-                              <p>Jouer jusqu'à: <span class="modal_5_scoreTotal">0</span></p>
-                            </section> 
                             <hr>
-                            <section class="modal_5_buttons">
-                              <p>veuillez choisir un nombre de départ :</p>
-                              <input type="number" class="modal_5_number" min="0" max="10" value="0">
-                              <button class="modal_5_player1">Joueur 1</button>
-                              <button class="modal_5_player2">Joueur 2</button>
-                              <button class="modal_5_reset">Reset</button>
+                            <section class="modal_4_button">
+                                <button class="modal_4_start">Commencer</button>
                             </section>
-                            <section class="modal_5_winner">
-                              <p><span class="modal_5_win"></span>  gagnant</p>
+                            <section class="modal_4_buttons">
+                                <button class="modal_4_player">Jouer</button>
+                                <button class="modal_4_reset">Reset</button>
+                            </section>
+                            <section class="modal_4_winner">
+                                <p><span class="modal_4_win"></span> gagnant</p>
                             </section>
                         </section>
                     </section>
                 </section>
-                <section class="modal" id="modal_6">
-                    <section class="modal_content">
-                        <a id="close_modal_6">
-                            ×
-                        </a>
+                <!-- Modal Affiches Ageval -->
+                <section class="modal" id="modal_5">
+                    <a id="close_modal_5">
+                        ×
+                    </a>
+                    <section class="modal_content modal_5_slide">
                         <article>
                             <figure>
                                 <img src="./img/portfolio/affiche_ageval.png" alt="Image 2">
                             </figure>
+                        </article>
+                        <article>
                             <figure>
                                 <img src="./img/portfolio/mémo_ageval.png" alt="Image 2">
                             </figure>
+                        </article>
+                        <article>
                             <figure>
                                 <img src="./img/portfolio/affiche_perso.png" alt="Image 2">
                             </figure>
+                        </article>
+                        <article>
                             <figure>
                                 <img src="./img/portfolio/volet_numerique_1.png" alt="Image 2">
                             </figure>
+                        </article>
+                        <article>
                             <figure>
                                 <img src="./img/portfolio/volet_numerique_2.png" alt="Image 2">
                             </figure>
                         </article>
                     </section>
+                    <section class="modal5Carousel-dots"></section>
                 </section>
             </section>
             <section id="Diplome" class="background_grey">
@@ -510,12 +489,13 @@
             <img src="./img/main/to_top.png" alt="Bouton de retour haut de l'écran">
         </button>
 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="./js/script.js"></script>
         <script src="./js/meteo.js"></script>
         <script src="./js/monsterSlayer.js"></script>
         <script src="./js/todolist.js"></script>
-        <script src="./js/carousel.js"></script>
         <script src="./js/scoreKeeper.js"></script>
+        <script src="./js/afficheAgeval.js"></script>
     </body>
 
 </html>

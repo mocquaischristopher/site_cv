@@ -32,32 +32,37 @@ nav {
 }
 
 @include phone() {
-    #menu_nav {
-        position: fixed;
-        left: 0;
+    nav {
+        position: sticky;
         top: 0;
-        height: 100%;
-        width: 0;
-        overflow-x: hidden;
-        transition: 1s;
-        z-index: 5;
-        .close_nav {
-            position: absolute;
-            font-size: 4rem;
-            right: 5%;
-            top: 2%;
-            z-index: 1;
-        }
-        ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        #menu_nav {
+            position: fixed;
+            left: 0;
+            top: 0;
             height: 100%;
-            li {
-                a {
-                    font-size: 3rem;
-                    padding: 4%;
-                    transition: 0.3s;
+            width: 0;
+            overflow-x: hidden;
+            transition: 1s;
+            z-index: 5;
+            .close_nav {
+                position: absolute;
+                font-size: 4rem;
+                right: 5%;
+                top: 2%;
+                z-index: 1;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+                background-color: #1e73be;
+                li {
+                    a {
+                        font-size: 3rem;
+                        padding: 4%;
+                        transition: 0.3s;
+                    }
                 }
             }
         }
@@ -73,31 +78,36 @@ nav {
     }
 }
 @include tablet() {
-    #menu_nav {
-        position: fixed;
+    nav {
+        position: sticky;
         top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        overflow-x: hidden;
-        transition: 1s;
-        z-index: 5;
-        .close_nav {
-            position: absolute;
-            font-size: 4rem;
-            right: 5%;
-            top: 2%;
-            z-index: 1;
-        }
-        ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        #menu_nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
             height: 100%;
-            li {
-                a {
-                    font-size: 3rem;
-                    padding: 3%;
+            overflow-x: hidden;
+            transition: 1s;
+            z-index: 5;
+            .close_nav {
+                position: absolute;
+                font-size: 4rem;
+                right: 5%;
+                top: 2%;
+                z-index: 1;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+                background-color: #1e73be;
+                li {
+                    a {
+                        font-size: 3rem;
+                        padding: 3%;
+                    }
                 }
             }
         }
@@ -122,8 +132,8 @@ nav {
             display: none;
         }
         #menu_nav {
-            display: block!important;
-            width: 100%!important;
+            display: block !important;
+            width: 100% !important;
             // top: 15%;
             ul {
                 margin: 0;

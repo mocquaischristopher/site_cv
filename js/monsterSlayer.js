@@ -51,7 +51,7 @@ function li(key, attackMonster, attackYou){
     liM.classList.add("red");
     
     let txtYou;
-    let txtMonster = "MONSTER hits PLAYER FOR " + attackMonster;
+    let txtMonster = "Le Monstre hits PLAYER FOR " + attackMonster;
 
     switch (key) {
         case "attack":

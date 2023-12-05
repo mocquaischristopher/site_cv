@@ -15,13 +15,6 @@
                 flex: 0 0 100%;
                 height: 100%;
                 transition: 0.7s ease-in-out;
-                // figure {
-                //     height: 100%;
-                //     img {
-                //         height: 100%;
-                //         object-fit: cover;
-                //     }
-                // }
                 p {
                     padding-bottom: 3%;
                 }
@@ -41,17 +34,11 @@
         }
         .carousel-dots {
             position: absolute;
-            /* Les points sont absolument positionnés */
             z-index: 3;
-            /* Ils sont placés au-dessus des autres éléments */
             left: 50%;
-            /* La distance à gauche est de 50% */
             right: 50%;
-            /* La distance à droite est de 50% */
             display: flex;
-            /* Affiche les points en ligne */
             justify-content: center;
-            /* Centrage des points */
             .dot {
                 border-radius: 50%;
                 margin: 5px;
@@ -68,7 +55,6 @@
     #modal_1, #modal_2, #modal_3, #modal_4,
     #modal_5, #modal_6 {
         display: none;
-
     }
     .modal {
         width: 100%;
