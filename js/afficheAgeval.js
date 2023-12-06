@@ -5,7 +5,6 @@ const modal5Slides = document.querySelectorAll(".modal5Slide")
 let modal5Dots;
 let modal5SlidIntervalId;
 let modal5CurrentSlide = 1;
-console.log(modal5Slides)
 
 // Fonction pour afficher un slide spécifique en utilisant un index
 function modal5SlideTo(index) {
@@ -30,7 +29,7 @@ modal5Dots = document.querySelectorAll('.modal5Dot');
 // Boucle pour ajouter des écouteurs d'événement "click" sur chaque "dot"
 modal5Dots.forEach((elt, key) => elt.addEventListener('click', () => modal5SlideTo(key)));
 // Initialisation de l'intervalle pour afficher les slides
-modal5IntervalId = setInterval(modal5ShowSlide, modal5SlideTimeout)
+let modal5IntervalId = setInterval(modal5ShowSlide, modal5SlideTimeout)
 // Boucle sur tous les éléments de type "slide" pour ajouter des écouteurs d'événement pour les interactions avec la souris et le toucher
 modal5Slides.forEach(elt => {
     let startX;
