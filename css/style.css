@@ -510,20 +510,19 @@ ul .red {
 .modal_3_body .modal_3_h1 {
   text-align: center;
 }
-.modal_3_body section {
+.modal_3_body .modal_3_main {
   display: grid;
-  gap: 0 15px;
   margin-bottom: 2%;
 }
-.modal_3_body section .modal_3_text {
+.modal_3_body .modal_3_main .modal_3_text {
   grid-area: inputText;
   transition: width 0.5s ease-in-out;
 }
-.modal_3_body section .modal_3_text:focus {
+.modal_3_body .modal_3_main .modal_3_text:focus {
   background-color: sandybrown;
   color: white;
 }
-.modal_3_body section .modal_3_add {
+.modal_3_body .modal_3_main .modal_3_add {
   grid-area: buttonAdd;
   cursor: pointer;
   background-color: greenyellow;
@@ -583,17 +582,17 @@ ul .red {
 }
 
 @media only screen and (max-width: 767px) {
-  section {
+  .modal_3_main {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 0.3fr 1fr;
     gap: 0 15px;
     grid-template-areas: ". inputText inputText ." ". buttonAdd buttonAdd .";
   }
-  section .modal_3_text {
+  .modal_3_main .modal_3_text {
     width: max-content;
     margin-bottom: 10%;
   }
-  section .modal_3_text:focus {
+  .modal_3_main .modal_3_text:focus {
     width: max-content;
   }
   ul li .update, ul li .delete {
@@ -601,17 +600,17 @@ ul .red {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  section {
+  .modal_3_main {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 0.3fr 1fr;
     gap: 0 15px;
     grid-template-areas: ". inputText inputText ." ". buttonAdd buttonAdd .";
   }
-  section .modal_3_text {
+  .modal_3_main .modal_3_text {
     width: 60%;
     margin-bottom: 5%;
   }
-  section .modal_3_text:focus {
+  .modal_3_main .modal_3_text:focus {
     width: 99%;
   }
   ul li .update, ul li .delete {
@@ -619,16 +618,16 @@ ul .red {
   }
 }
 @media screen and (min-width: 1024px) {
-  .modal_3_body section {
+  .modal_3_body .modal_3_main {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 0.3fr 1fr;
     grid-template-areas: ". inputText buttonAdd .";
   }
-  .modal_3_body section .modal_3_text {
+  .modal_3_body .modal_3_main .modal_3_text {
     width: 35%;
   }
-  .modal_3_body section .modal_3_text:focus {
+  .modal_3_body .modal_3_main .modal_3_text:focus {
     width: 70%;
   }
   .modal_3_body ul li .update, .modal_3_body ul li .delete {
@@ -694,6 +693,84 @@ ul .red {
   .modal_4_buttons,
   .modal_4_winner {
     font-size: 2rem;
+  }
+}
+#modal_5 {
+  overflow: hidden;
+}
+#modal_5 a {
+  width: 35px;
+  height: 35px;
+  background-color: #c0c0c0;
+  border-radius: 50px;
+  position: absolute;
+  top: 30px;
+  right: 80px;
+  cursor: pointer;
+  font-size: 2em;
+  text-align: center;
+  z-index: 2;
+}
+#modal_5 .modal5Carousel {
+  position: relative;
+  height: 80%;
+  width: 80%;
+  padding: 25px;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: white;
+  overflow: scroll;
+  margin: auto;
+}
+#modal_5 .modal5Carousel .modal_5_slide {
+  display: flex;
+  overflow: hidden;
+  height: 70vh;
+}
+#modal_5 .modal5Carousel .modal_5_slide .modal5Slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 100%;
+  height: 100%;
+  transition: 0.7s ease-in-out;
+}
+#modal_5 .modal5Carousel .modal_5_slide .modal5Slide figure img {
+  height: 100%;
+}
+#modal_5 .modal5Carousel .modal5Carousel-dots {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  right: 50%;
+  display: flex;
+  justify-content: center;
+}
+#modal_5 .modal5Carousel .modal5Carousel-dots .modal5Dot, #modal_5 .modal5Carousel .modal5Carousel-dots .dot {
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+#modal_5 .modal5Carousel .modal5Carousel-dots .active {
+  border: 10px solid #1e73be !important;
+}
+#modal_5 .modal5Carousel .modal5Carousel-dots .inactive {
+  border: 10px solid #cae8ff;
+}
+
+@media only screen and (max-width: 767px) {
+  #modal_5 .modal5Carousel .modal_5_slide .modal5Slide figure {
+    height: 36%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #modal_5 .modal5Carousel .modal_5_slide .modal5Slide figure {
+    height: 74%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #modal_5 .modal5Carousel .modal_5_slide .modal5Slide figure {
+    height: 90%;
   }
 }
 #Contact {

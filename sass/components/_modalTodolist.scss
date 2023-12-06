@@ -8,9 +8,8 @@
     .modal_3_h1 {
         text-align: center;
     }
-    section {
+    .modal_3_main {
         display: grid;
-        gap: 0 15px;
         margin-bottom: 2%;
         & .modal_3_text {
             grid-area: inputText;
@@ -84,7 +83,7 @@
 }
 
 @include phone() {
-    section {
+    .modal_3_main {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr 0.3fr 1fr;
         gap: 0 15px;
@@ -109,7 +108,7 @@
 }
 
 @include tablet() {
-    section {
+    .modal_3_main {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr 0.3fr 1fr;
         gap: 0 15px;
@@ -136,7 +135,7 @@
 
 @include desktop() {
     .modal_3_body {
-        section {
+        .modal_3_main {
             display: grid;
             grid-template-rows: 1fr;
             grid-template-columns: 1fr 1fr 0.3fr 1fr;
