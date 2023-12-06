@@ -1,11 +1,11 @@
 "use strict";
 
 const modal5SlideTimeout = 5000;
-const modal5Slides = document.querySelectorAll(".modal_5_slide")
+const modal5Slides = document.querySelectorAll(".modal5Slide")
 let modal5Dots;
 let modal5SlidIntervalId;
 let modal5CurrentSlide = 1;
-
+console.log(modal5Slides)
 
 // Fonction pour afficher un slide spécifique en utilisant un index
 function modal5SlideTo(index) {
@@ -21,7 +21,7 @@ function modal5ShowSlide() {
 // Boucle pour créer les "dots" en fonction du nombre de slides
 for (let i = 1; i <= modal5Slides.length; i++) {
     let dotClass = i == currentSlide ? 'active' : 'inactive';
-    let dot = `<span data-slidId="${i}" class="dot ${dotClass}"></span>`;
+    let dot = `<span data-slidId="${i}" class="modal5Dot ${dotClass}"></span>`;
     document.querySelector('.modal5Carousel-dots').innerHTML += dot;
 }
 
@@ -30,7 +30,7 @@ modal5Dots = document.querySelectorAll('.modal5Dot');
 // Boucle pour ajouter des écouteurs d'événement "click" sur chaque "dot"
 modal5Dots.forEach((elt, key) => elt.addEventListener('click', () => modal5SlideTo(key)));
 // Initialisation de l'intervalle pour afficher les slides
-let modal5IntervalId = setInterval(modal5ShowSlide, modal5SlideTimeout)
+modal5IntervalId = setInterval(modal5ShowSlide, modal5SlideTimeout)
 // Boucle sur tous les éléments de type "slide" pour ajouter des écouteurs d'événement pour les interactions avec la souris et le toucher
 modal5Slides.forEach(elt => {
     let startX;
