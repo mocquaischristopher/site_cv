@@ -8,6 +8,7 @@
         <meta name="robots" content="noindex, nofollow">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
         <link rel="stylesheet" href="./css/style.css">
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,9 +18,6 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&family=Source+Sans+Pro&display=swap"
             rel="stylesheet">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-            crossorigin="anonymous" />
         <title>Mocquais-Christopher-CV</title>
     </head>
 
@@ -284,30 +282,30 @@
                             <h1 class="modal_2_h1">Monster Slayer</h1>
                             <section class="modal_2_header">
                                 <article class="modal_2_player">
-                                    <h2>YOU</h2>
+                                    <h2>Vous</h2>
                                     <aside class="modal_2_you">
-                                        <label for="modal_2_pvYou">Health : <span
+                                        <label for="modal_2_pvYou">Vie : <span
                                                 class="modal_2_pvYou">100</span>%</label>
                                         <progress id="modal_2_pvYou" min="0" max="100" value="100">100</progress>
                                     </aside>
                                 </article>
                                 <article class="modal_2_no-player">
-                                    <h2>MONSTER</h2>
+                                    <h2>Ennemi</h2>
                                     <aside class="modal_2_monster">
-                                        <label for="modal_2_pvMonster">Health : <span
+                                        <label for="modal_2_pvMonster">Vie : <span
                                                 class="modal_2_pvMonster">100</span>%</label>
                                         <progress id="modal_2_pvMonster" min="0" max="100" value="100">100</progress>
                                     </aside>
                                 </article>
                             </section>
                             <section class="modal_2_button">
-                                <button class="modal_2_start">START NEW GAME</button>
+                                <button class="modal_2_start">Nouveau Jeu</button>
                             </section>
                             <section class="modal_2_buttons">
-                                <button class="modal_2_attack">ATTACK</button>
-                                <button class="modal_2_specialAttack">SPECIAL ATTACK</button>
-                                <button class="modal_2_heal">HEAL</button>
-                                <button class="modal_2_giveUp">GIVE UP</button>
+                                <button class="modal_2_attack">Attaque</button>
+                                <button class="modal_2_specialAttack">Attaque Spécial</button>
+                                <button class="modal_2_heal">Soin</button>
+                                <button class="modal_2_giveUp">Abandon</button>
                             </section>
                             <section class="modal_2_log">
                             </section>
@@ -491,8 +489,10 @@
             <img src="./img/main/to_top.png" alt="Bouton de retour haut de l'écran">
         </button>
 
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="./js/script.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+        </script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>        <script src="./js/script.js"></script>
         <script src="./js/meteo.js"></script>
         <script src="./js/monsterSlayer.js"></script>
         <script src="./js/todolist.js"></script>
