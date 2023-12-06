@@ -1,0 +1,105 @@
+#modal_5 {
+    overflow: hidden;
+    a {
+        width: 35px;
+        height: 35px;
+        background-color: #c0c0c0;
+        border-radius: 50px;
+        position: absolute;
+        top: 30px;
+        right: 80px;
+        cursor: pointer;
+        font-size: 2em;
+        text-align: center;
+        z-index: 2;
+    }
+    .modal5Carousel {
+        position: relative;
+        height: 80%;
+        width: 80%;
+        padding: 25px;
+        border: 2px solid black;
+        border-radius: 15px;
+        background-color: white;
+        overflow: scroll;
+        margin: auto;
+
+        .modal_5_slide {
+            display: flex;
+            overflow: hidden;
+            height: 70vh;
+            .modal5Slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 0 0 100%;
+                height: 100%;
+                transition: 0.7s ease-in-out;
+                figure {
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .modal5Carousel-dots {
+            position: absolute;
+            z-index: 3;
+            left: 50%;
+            right: 50%;
+            display: flex;
+            justify-content: center;
+            .modal5Dot, .dot {
+                border-radius: 50%;
+                margin: 5px;
+                cursor: pointer;
+            }
+            .active {
+                border: 10px solid $colour-nav !important;
+            }
+            .inactive {
+                border: 10px solid $colour-grey;
+            }
+        }
+    }
+}
+
+@include phone() {
+    #modal_5 {
+        .modal5Carousel {
+            .modal_5_slide {
+                .modal5Slide {
+                    figure {
+                        height: 36%;
+                    }
+                }
+            }
+        }
+    }
+}
+@include tablet() {
+    #modal_5 {
+        .modal5Carousel {
+            .modal_5_slide {
+                .modal5Slide {
+                    figure {
+                        height: 74%;
+                    }
+                }
+            }
+        }
+    }
+}
+@include desktop() {
+    #modal_5 {
+        .modal5Carousel {
+            .modal_5_slide {
+                .modal5Slide {
+                    figure {
+                        height: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
