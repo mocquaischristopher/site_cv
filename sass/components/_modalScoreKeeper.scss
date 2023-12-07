@@ -8,21 +8,21 @@
     .modal_4_h1 {
         color: $colour-modal_4_title;
     }
+    hr {
+        margin: 5% 0;
+    }
 }
 
-.modal_4_scorePlayer1 {
+.modal_4_scorePlayer1,
+.modal_4_player1, .modal_4_win_p1 {
     color: $colour-modal_4_player1;
 }
-.modal_4_player1 {
-    background-color: $colour-modal_4_player1;
-    color: $colour-modal_4_white;
-}
-.modal_4_scorePlayer2 {
+// .modal_4_player {
+//     color: $colour-modal_4_white;
+// }
+.modal_4_scorePlayer2,
+.modal_4_player2, .modal_4_win_p2 {
     color: $colour-modal_4_player2;
-}
-.modal_4_player2 {
-    background-color: $colour-modal_4_player2;
-    color: $colour-modal_4_white;
 }
 .modal_4_scoreTotal {
     color: $colour-modal_4_reset;
@@ -31,9 +31,7 @@
     background-color: $colour-modal_4_reset;
     color: $colour-modal_4_white;
 }
-.modal_4_player1,
-.modal_4_player2,
-.modal_4_number,
+.modal_4_player,
 .modal_4_reset {
     border-radius: 15%;
     cursor: pointer;
@@ -43,12 +41,31 @@
 .modal_4_buttons,
 .modal_4_winner {
     font-size: 1rem;
+    padding: 0.75%;
+}
+
+.modal_4_button {
+    .modal_4_start {
+        background-color: $colour-modal_4_player2;
+        color: $colour-modal_4_white;
+        border-radius: 10px;
+        padding: 0.75%;
+    }
+}
+
+.modal_4_buttons {
+    .modal_4_player {
+        background: linear-gradient(0.5turn, $colour-modal_4_player1, $colour-modal_4_player2);
+        padding: 0.75%;
+        color: $colour-modal_3_blue;
+    }
 }
 
 @include desktop() {
     .modal_4_score,
     .modal_4_buttons,
-    .modal_4_winner {
+    .modal_4_winner_p1,
+    .modal_4_winner_p2 {
         font-size: 2rem;
     }
 }
