@@ -4,8 +4,8 @@ let pvMonsterSpan = document.querySelector(".modal_2_pvMonster");
 let pvYou;
 let pvMonster;
 
-let progressYou = document.getElementById("modal_2_pvYou");
-let progressMonster = document.getElementById("modal_2_pvMonster");
+let progressYou = document.getElementById("modal_2_barYou");
+let progressMonster = document.getElementById("modal_2_barMonster");
 
 let log = document.querySelector(".modal_2_log");
 
@@ -15,7 +15,11 @@ let attackButton = document.querySelector(".modal_2_attack");
 let specialButton = document.querySelector(".modal_2_specialAttack");
 let healButton = document.querySelector(".modal_2_heal");
 let giveUpButton = document.querySelector(".modal_2_giveUp");
+
+let deleteBoom = false;
+
 buttons.hidden = true;
+
 startButton.addEventListener("click", startMonsterSlayer);
 attackButton.addEventListener("click", attack);
 specialButton.addEventListener("click", special);
@@ -23,15 +27,17 @@ healButton.addEventListener("click", heal);
 giveUpButton.addEventListener("click", giveUp);
 
 function startMonsterSlayer() {
-    console.log("allo")
     pvYou = 100;
     pvMonster = 100;
+    let colorGreen = "green";
 
-    pvYouSpan.innerHTML = pvYou;
-    pvMonsterSpan.innerHTML = pvMonster;
+    pvYouSpan.innerHTML = pvYou + " %";
+    pvMonsterSpan.innerHTML = pvMonster + " %";
 
-    progressYou.value = pvYou;
-    progressMonster.value = pvMonster;
+    progressYou.style.background = colorGreen;
+    progressYou.style.width = pvYou + "%";
+    progressMonster.style.background = "green";
+    progressMonster.style.width = pvMonster + "%";
 
     startButton.hidden = true;
     attackButton.disabled = false;
@@ -39,43 +45,57 @@ function startMonsterSlayer() {
     healButton.disabled = false;
     buttons.hidden = false;
 
-    let turns = document.createElement("ul");
+    let turns = document.createElement("section");
     turns.classList.add("modal_2_ul");
     log.append(turns);
 }
 
 function li(key, attackMonster, attackYou) {
-    let liP = document.createElement("li");
-    liP.classList.add("blue");
-    let liM = document.createElement("li");
-    liM.classList.add("red");
+    let articleP = document.createElement("article");
+    articleP.classList.add("blue");
+    let articleI = document.createElement("img");
+    articleI.classList.add("articleImg");
+    let articleM = document.createElement("article");
+    articleM.classList.add("red");
 
     let txtYou;
-    let txtMonster = "L'Ennemi vous frappe pour " + attackMonster;
+    let txtMonster = "- " + attackMonster + " PV";
 
     switch (key) {
         case "attack":
-            txtYou = "le Joueur frappe le Monstre pour " + attackYou;
+            txtYou = "- " + attackYou + " PV";
             break;
 
         case "special":
-            txtYou = "le Joueur frappe fort le Monstre pour " + attackYou;
+            txtYou = "- " + attackYou + " PV";
             break;
 
         case "heal":
-            txtYou = "le Joueur se Soigne pour 10 PV";
+            txtYou = "+ 10 PV";
             break;
     }
 
     let textYou = document.createTextNode(txtYou);
     let textMonster = document.createTextNode(txtMonster);
+    articleI.src = './img/portfolio/modal2/boom.webp';
 
     let turn = document.getElementsByClassName("modal_2_ul");
-    turn[0].append(liP);
-    turn[0].append(liM);
-    liP.append(textYou);
-    liM.append(textMonster);
-    console.log(turn[0]);
+    if(deleteBoom === true) {
+        turn[0].remove();
+        deleteBoom = false;
+        let turns = document.createElement("section");
+        turns.classList.add("modal_2_ul");
+        log.append(turns);
+    
+    }
+    console.log(turn)
+    turn[0].append(articleP);
+    turn[0].append(articleI);
+    turn[0].append(articleM);
+    articleP.append(textYou);
+    articleM.append(textMonster);
+    console.log(Object.keys(turn).length);
+    deleteBoom = true;
 }
 
 function attack() {
@@ -85,11 +105,11 @@ function attack() {
     li("attack", attackMonster, attackYou);
 
     pvYou -= attackMonster;
-    pvYouSpan.innerHTML = pvYou;
-    progressYou.value = pvYou;
+    pvYouSpan.innerHTML = pvYou + " %";
+    progressYou.style.width = pvYou + "%";
     pvMonster -= attackYou;
-    pvMonsterSpan.innerHTML = pvMonster;
-    progressMonster.value = pvMonster;
+    pvMonsterSpan.innerHTML = pvMonster + " %";
+    progressMonster.style.width = pvMonster + "%";
 
     win();
 }
@@ -102,10 +122,10 @@ function special() {
 
     pvYou -= attackMonster;
     pvMonster -= attackYou;
-    pvYouSpan.innerHTML = pvYou;
-    progressYou.value = pvYou;
-    pvMonsterSpan.innerHTML = pvMonster;
-    progressMonster.value = pvMonster;
+    pvYouSpan.innerHTML = pvYou + " %";
+    progressYou.style.width = pvYou + "%";
+    pvMonsterSpan.innerHTML = pvMonster + " %";
+    progressMonster.style.width = pvMonster + "%";
 
     win();
 }
@@ -123,10 +143,10 @@ function heal() {
 
     pvYou -= attackMonster;
     pvMonster;
-    pvYouSpan.innerHTML = pvYou;
-    progressYou.value = pvYou;
-    pvMonsterSpan.innerHTML = pvMonster;
-    progressMonster.value = pvMonster;
+    pvYouSpan.innerHTML = pvYou + " %";
+    progressYou.style.width = pvYou + "%";
+    pvMonsterSpan.innerHTML = pvMonster + " %";
+    progressMonster.style.width = pvMonster + "%";
 
     win();
 }
@@ -148,7 +168,6 @@ function giveUp() {
             turn[0].remove();
             startMonsterSlayer();
         } else {
-            console.log(turn);
             attackButton.disabled = true;
             specialButton.disabled = true;
             healButton.disabled = true;
@@ -158,6 +177,24 @@ function giveUp() {
 
 function win() {
     let turn = document.getElementsByClassName("modal_2_ul");
+
+    let progressYouWidth = parseInt(document.getElementById("modal_2_barYou").style.width);
+
+    let progressMonsterWidth = parseInt(document.getElementById("modal_2_barMonster").style.width);
+
+    if(progressYouWidth<= 50 ) {
+        progressYou.style.background = "orange";
+    }
+    if(progressYouWidth <= 25 ) {
+        progressYou.style.background = "red";
+    }
+
+    if(progressMonsterWidth<= 50 ) {
+        progressMonster.style.background = "orange";
+    }
+    if( progressMonsterWidth <= 25 ) {
+        progressMonster.style.background = "red";
+    }
 
     if (pvYou <= 0) {
         Swal.fire({
