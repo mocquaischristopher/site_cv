@@ -633,7 +633,7 @@ h2 {
 }
 .modal_3_body .modal_3_main .modal_3_text:focus {
   background-color: sandybrown;
-  color: white;
+  color: darkblue;
 }
 .modal_3_body .modal_3_main .modal_3_add {
   grid-area: buttonAdd;
