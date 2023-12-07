@@ -759,23 +759,18 @@ h2 {
 .modal_4_body .modal_4_h1 {
   color: darkslategrey;
 }
+.modal_4_body hr {
+  margin: 5% 0;
+}
 
-.modal_4_scorePlayer1 {
+.modal_4_scorePlayer1,
+.modal_4_player1, .modal_4_win_p1 {
   color: cadetblue;
 }
 
-.modal_4_player1 {
-  background-color: cadetblue;
-  color: white;
-}
-
-.modal_4_scorePlayer2 {
+.modal_4_scorePlayer2,
+.modal_4_player2, .modal_4_win_p2 {
   color: green;
-}
-
-.modal_4_player2 {
-  background-color: green;
-  color: white;
 }
 
 .modal_4_scoreTotal {
@@ -787,9 +782,7 @@ h2 {
   color: white;
 }
 
-.modal_4_player1,
-.modal_4_player2,
-.modal_4_number,
+.modal_4_player,
 .modal_4_reset {
   border-radius: 15%;
   cursor: pointer;
@@ -799,12 +792,27 @@ h2 {
 .modal_4_buttons,
 .modal_4_winner {
   font-size: 1rem;
+  padding: 0.75%;
+}
+
+.modal_4_button .modal_4_start {
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 0.75%;
+}
+
+.modal_4_buttons .modal_4_player {
+  background: linear-gradient(0.5turn, cadetblue, green);
+  padding: 0.75%;
+  color: darkblue;
 }
 
 @media screen and (min-width: 1024px) {
   .modal_4_score,
   .modal_4_buttons,
-  .modal_4_winner {
+  .modal_4_winner_p1,
+  .modal_4_winner_p2 {
     font-size: 2rem;
   }
 }
