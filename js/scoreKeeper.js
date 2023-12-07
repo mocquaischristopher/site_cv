@@ -4,8 +4,10 @@ let scorePlayer = document.getElementsByClassName('modal_4_scorePlayer');
 let scorePlayer1 = document.querySelector('.modal_4_scorePlayer1');
 let scorePlayer2 = document.querySelector('.modal_4_scorePlayer2');
 let scoreTotal = document.querySelector('.modal_4_scoreTotal');
-let winer = document.querySelector('.modal_4_winner');
-let winKeeper = document.querySelector('.modal_4_win');
+let winerp1 = document.querySelector('.modal_4_winner_p1');
+let winerp2 = document.querySelector('.modal_4_winner_p2');
+let winKeeperp1 = document.querySelector('.modal_4_win_p1');
+let winKeeperp2 = document.querySelector('.modal_4_win_p2');
 
 let startButtonKeeper = document.querySelector('.modal_4_start');
 
@@ -18,7 +20,8 @@ let scoreP2 = 0;
 let numberRandom;
 let numberRandomPlayer;
 let winner = false;
-winer.hidden = true;
+winerp1.hidden = true;
+winerp2.hidden = true;
 buttonsKeeper.hidden = true;
 
 startButtonKeeper.addEventListener('click', start);
@@ -40,18 +43,20 @@ function playerRandom() {
         scorePlayer1.innerHTML = scoreP1;
         if( scoreP1 === numberRandom) {
             player.disabled = true;
-            winner = true;
-            winer.hidden = false;
-            winKeeper.textContent = "Joueur 1";
+            winner = false;
+            // winKeeperp1.hidden = false;
+            winerp1.hidden = false;
+            winKeeperp1.textContent = "Joueur 1";
         }
     } else {
         scoreP2 ++;
         scorePlayer2.innerHTML = scoreP2;
         if( scoreP2 === numberRandom) {
             player.disabled = true;
-            winner = true;
-            winer.hidden = false;
-            winKeeper.textContent = "Joueur 2";
+            winner = false;
+            // winKeeperp2.hidden = false;
+            winerp2.hidden = false;
+            winKeeperp2.textContent = "Joueur 2";
         }
     }
 }
@@ -63,7 +68,8 @@ function reset() {
     scorePlayer1.textContent = 0;
     scorePlayer2.textContent = 0;
     winner = false;
-    winer.hidden = true;
+    winerp1.hidden = true;
+    winerp2.hidden = true;
     player.disabled = false;
 
     numberRandom = Math.round(Math.random() * (20 - 1 +1)+1);
