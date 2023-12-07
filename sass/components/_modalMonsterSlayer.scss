@@ -5,30 +5,101 @@
 
 .modal_2_header {
     display: flex;
-    & .modal_2_player {
-        & h2, aside {
+    justify-content: space-around;
+    margin-bottom: 5%;
+    .modal_2_player {
+        width: 50%;
+        text-align: center;
+        .modal_2_you {
+            width: 80%;
+            margin: auto;
+        }
+        h2,
+        .modal_2_pvY {
             color: $colour-modal_2_player;
         }
-    }
-    & .modal_2_no-player {
-        & h2, aside {
-            color: $colour-modal_2_monster;
+        .modal_2_pvYou {
+            color: $colour-modal_2_button;
+            position: absolute;
+            top: 43.5%;
+            left: 25%;
+        }
+        h2 {
+            font-family: $font-family-gagalin;
         }
     }
-    & progress {
-        -webkit-appearance: none;
+    .modal_2_no-player {
+        width: 50%;
+        text-align: center;
+        .modal_2_monster {
+            width: 80%;
+            margin: auto;
+        }
+        h2,
+        .modal_2_pvM {
+            color: $colour-modal_2_monster;
+        }
+        .modal_2_pvMonster {
+            color: $colour-modal_2_button;
+            position: absolute;
+            top: 43.5%;
+            left: 73%;
+        }
+        h2 {
+            font-family: $font-family-gagalin;
+        }
+    }
+    #modal_2_progress {
+        width: 100%;
+        height: 20px;
+        background: grey;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 0px blue;
+
+        // margin-bottom: 5%!important;
+        #modal_2_barYou,
+        #modal_2_barMonster {
+            height: 100%;
+            border-radius: 5px;
+            background-repeat: repeat;
+            // box-shadow: 0 0 10px 0px blue;
+            animation: shine 2s ease-in infinite, end 1s ease-out 1 2s;
+            transition: width 0.8s ease 0.4s;
+            margin-top: 2%;
+            span {
+                text-align: center;
+                height: 18px;
+                border-radius: 4px;
+                transition: 0.4s linear;
+                transition-property: width, background-color;
+            }
+        }
+        #modal_2_barYou {
+            background: blue;
+        }
+        #modal_2_barMonster {
+            background: red;
+        }
     }
 }
 
-.modal_2_button, .modal_2_buttons {
+.modal_2_button,
+.modal_2_buttons {
     text-align: center;
 }
-.modal_2_start{
+.modal_2_start,
+.modal_2_attack,
+.modal_2_specialAttack,
+.modal_2_heal,
+.modal_2_giveUp {
+    border-radius: 10px;
+    padding: 0.75%;
+}
+.modal_2_start {
     background-color: $colour-modal_2_button;
 }
-.modal_2_attack{
+.modal_2_attack {
     background-color: red;
-    color: white;
 }
 .modal_2_specialAttack {
     background-color: orange;
@@ -40,19 +111,76 @@
     background-color: grey;
     color: white;
 }
-ul {
-    padding: 0;
-    background-color: honeydew;
-    & li {
-        text-decoration: none;
-        list-style: none;
+.modal_2_log {
+    .modal_2_ul {
+        padding: 0;
+        background-color: honeydew;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: flex-start;
+        .blue {
+            color: $colour-modal_2_button;
+            background-color: deepskyblue;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .articleImg {
+            width: 22%;
+            animation: wiggle 2s linear infinite;
+        }
+        @keyframes wiggle {
+            0%,
+            7% {
+                transform: rotateZ(0);
+            }
+            15% {
+                transform: rotateZ(-15deg);
+            }
+            20% {
+                transform: rotateZ(10deg);
+            }
+            25% {
+                transform: rotateZ(-10deg);
+            }
+            30% {
+                transform: rotateZ(6deg);
+            }
+            35% {
+                transform: rotateZ(-4deg);
+            }
+            40%,
+            100% {
+                transform: rotateZ(0);
+            }
+        }
+        .red {
+            color: $colour-modal_2_button;
+            background-color: red;
+        }
     }
-    & .blue {
-        color: $colour-modal_2_monster;
-        background-color: deepskyblue;
+}
+
+@include phone() {
+    .modal_2_log {
+        .modal_2_ul {
+            font-size: 1.15rem;
+        }
     }
-    & .red {
-        color: red;
-        background-color: pink;
+}
+
+@include tablet() {
+    .modal_2_log {
+        .modal_2_ul {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@include desktop() {
+    .modal_2_log {
+        .modal_2_ul {
+            font-size: 2rem;
+        }
     }
 }
