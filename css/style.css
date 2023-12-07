@@ -431,11 +431,6 @@ h2 {
   font-size: 2em;
   text-align: center;
 }
-#Portfolio .modal .modal_content article {
-  width: 70vh;
-  text-align: center;
-  margin: 0 auto;
-}
 #Portfolio .modal .modal_content article figure img {
   width: 100%;
 }
@@ -447,19 +442,94 @@ h2 {
 
 .modal_2_header {
   display: flex;
+  justify-content: space-around;
+  margin-bottom: 5%;
 }
-.modal_2_header .modal_2_player h2, .modal_2_header .modal_2_player aside {
+.modal_2_header .modal_2_player {
+  width: 50%;
+  text-align: center;
+}
+.modal_2_header .modal_2_player .modal_2_you {
+  width: 80%;
+  margin: auto;
+}
+.modal_2_header .modal_2_player h2,
+.modal_2_header .modal_2_player .modal_2_pvY {
   color: darkblue;
 }
-.modal_2_header .modal_2_no-player h2, .modal_2_header .modal_2_no-player aside {
+.modal_2_header .modal_2_player .modal_2_pvYou {
+  color: greenyellow;
+  position: absolute;
+  top: 43.5%;
+  left: 25%;
+}
+.modal_2_header .modal_2_player h2 {
+  font-family: "gagalin", "sans-serif";
+}
+.modal_2_header .modal_2_no-player {
+  width: 50%;
+  text-align: center;
+}
+.modal_2_header .modal_2_no-player .modal_2_monster {
+  width: 80%;
+  margin: auto;
+}
+.modal_2_header .modal_2_no-player h2,
+.modal_2_header .modal_2_no-player .modal_2_pvM {
   color: red;
 }
-.modal_2_header progress {
-  -webkit-appearance: none;
+.modal_2_header .modal_2_no-player .modal_2_pvMonster {
+  color: greenyellow;
+  position: absolute;
+  top: 43.5%;
+  left: 73%;
+}
+.modal_2_header .modal_2_no-player h2 {
+  font-family: "gagalin", "sans-serif";
+}
+.modal_2_header #modal_2_progress {
+  width: 100%;
+  height: 20px;
+  background: grey;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px blue;
+}
+.modal_2_header #modal_2_progress #modal_2_barYou,
+.modal_2_header #modal_2_progress #modal_2_barMonster {
+  height: 100%;
+  border-radius: 5px;
+  background-repeat: repeat;
+  animation: shine 2s ease-in infinite, end 1s ease-out 1 2s;
+  transition: width 0.8s ease 0.4s;
+  margin-top: 2%;
+}
+.modal_2_header #modal_2_progress #modal_2_barYou span,
+.modal_2_header #modal_2_progress #modal_2_barMonster span {
+  text-align: center;
+  height: 18px;
+  border-radius: 4px;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+.modal_2_header #modal_2_progress #modal_2_barYou {
+  background: blue;
+}
+.modal_2_header #modal_2_progress #modal_2_barMonster {
+  background: red;
 }
 
-.modal_2_button, .modal_2_buttons {
+.modal_2_button,
+.modal_2_buttons {
   text-align: center;
+}
+
+.modal_2_start,
+.modal_2_attack,
+.modal_2_specialAttack,
+.modal_2_heal,
+.modal_2_giveUp {
+  border-radius: 10px;
+  padding: 0.75%;
 }
 
 .modal_2_start {
@@ -483,23 +553,67 @@ h2 {
   color: white;
 }
 
-ul {
+.modal_2_log .modal_2_ul {
   padding: 0;
   background-color: honeydew;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: flex-start;
 }
-ul li {
-  text-decoration: none;
-  list-style: none;
-}
-ul .blue {
-  color: red;
+.modal_2_log .modal_2_ul .blue {
+  color: greenyellow;
   background-color: deepskyblue;
+  display: flex;
+  flex-direction: row-reverse;
 }
-ul .red {
-  color: red;
-  background-color: pink;
+.modal_2_log .modal_2_ul .articleImg {
+  width: 22%;
+  animation: wiggle 2s linear infinite;
+}
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+.modal_2_log .modal_2_ul .red {
+  color: greenyellow;
+  background-color: red;
 }
 
+@media only screen and (max-width: 767px) {
+  .modal_2_log .modal_2_ul {
+    font-size: 1.15rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .modal_2_log .modal_2_ul {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .modal_2_log .modal_2_ul {
+    font-size: 2rem;
+  }
+}
 .modal_3_content {
   background-image: url("../img/portfolio/modal3/fond.webp");
   background-repeat: no-repeat;

@@ -283,20 +283,25 @@
                             <section class="modal_2_header">
                                 <article class="modal_2_player">
                                     <h2>Vous</h2>
-                                    <aside class="modal_2_you">
-                                        <label for="modal_2_pvYou">Vie : <span
-                                                class="modal_2_pvYou">100</span>%</label>
-                                        <progress id="modal_2_pvYou" min="0" max="100" value="100">100</progress>
-                                    </aside>
+                                    <article class="modal_2_you">
+                                        <span class="modal_2_pvY">PV :</span>
+                                        <article id="modal_2_progress">
+                                            <aside id="modal_2_barYou">
+                                            </aside>
+                                            <span class="modal_2_pvYou"></span>
+                                        </article>
+                                    </article>
                                 </article>
                                 <article class="modal_2_no-player">
                                     <h2>Ennemi</h2>
-                                    <aside class="modal_2_monster">
-                                        <label for="modal_2_pvMonster">Vie : <span
-                                                class="modal_2_pvMonster">100</span>%</label>
-                                        <progress id="modal_2_pvMonster" min="0" max="100" value="100">100</progress>
-                                    </aside>
-                                </article>
+                                    <article class="modal_2_monster">
+                                        <span class="modal_2_pvM">PV :</span>
+                                        <article id="modal_2_progress">
+                                            <aside id="modal_2_barMonster">
+                                                <span class="modal_2_pvMonster"></span>
+                                            </aside>
+                                        </article>
+                                    </article>
                             </section>
                             <section class="modal_2_button">
                                 <button class="modal_2_start">Nouveau Jeu</button>
@@ -492,7 +497,8 @@
         <script type="module" src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
         </script>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>        <script src="./js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./js/script.js"></script>
         <script src="./js/meteo.js"></script>
         <script src="./js/monsterSlayer.js"></script>
         <script src="./js/todolist.js"></script>
