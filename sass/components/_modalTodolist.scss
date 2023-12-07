@@ -17,7 +17,7 @@
         }
         & .modal_3_text:focus {
             background-color: $colour-modal_2_title;
-            color: white;
+            color: $colour-modal_3_blue;
         }
         & .modal_3_add {
             grid-area: buttonAdd;
